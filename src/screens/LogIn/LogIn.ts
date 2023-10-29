@@ -1,4 +1,5 @@
 import * as components from "../../components/export" 
+import EditLogInCss from "./LogInStyle.css"
 import RectangleInformation, {LogInAttributes} from "../../components/LogInComponents/RectangleInformation/RectangleInformation"
 import InputText, {InputTextAttributes} from "../../components/LogInComponents/InputText/InputText"
 
@@ -16,7 +17,7 @@ class LogInContainer extends HTMLElement {
     render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
-            
+            <style>${EditLogInCss}</style>
             `
             //Rectangle with information
             const RectangleContainer = this.ownerDocument.createElement("rectangle-information") as RectangleInformation
@@ -35,6 +36,11 @@ class LogInContainer extends HTMLElement {
             InputText.setAttribute(InputTextAttributes.text, "email")
             InputText.setAttribute(InputTextAttributes.text2, "password")
             this.shadowRoot.appendChild(InputText)
+
+            const linkPasswordForgot = this.ownerDocument.createElement("a")
+            linkPasswordForgot.classList.add("password-forgot")
+            linkPasswordForgot.textContent="Forgot your password?"
+            this.shadowRoot.appendChild(linkPasswordForgot)
         }
     }
 }
