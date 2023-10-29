@@ -29,3 +29,5 @@ class LogInContainer extends HTMLElement {
         }
     }
 }
+
+customElements.define("login-container", LogInContainer)
