@@ -41,6 +41,21 @@ class LogInContainer extends HTMLElement {
             linkPasswordForgot.classList.add("password-forgot")
             linkPasswordForgot.textContent="Forgot your password?"
             this.shadowRoot.appendChild(linkPasswordForgot)
+
+            /*const ButtonLogIn = this.ownerDocument.createElement("button")
+            ButtonLogIn.classList.add("button-remember")
+            this.shadowRoot.appendChild(ButtonLogIn)*/
+            //estilo en CSS
+            /*
+            .button-remember{
+            border-radius: 100rem;
+            background: #ffffff;
+            border-color: #601FEB;
+            width: 0.9rem;
+            height: 0.9rem;
+            }
+            */
+            
         }
     }
 }
