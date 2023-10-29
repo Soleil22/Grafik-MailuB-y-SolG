@@ -15,9 +15,10 @@ class LogInContainer extends HTMLElement {
     render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
+            <p>Hello</p>
             `
             //Rectangle with information
-            const RectangleContainer = this.ownerDocument.createElement("rectangle-main") as RectangleInformation
+            const RectangleContainer = this.ownerDocument.createElement("rectangle-information") as RectangleInformation
             RectangleContainer.classList.add("Rectangle-information")
             RectangleContainer.setAttribute(LogInAttributes.grafik, "Grafik.com")
             RectangleContainer.setAttribute(LogInAttributes.logo, "https://cdn-icons-png.flaticon.com/512/106/106226.png")
@@ -30,4 +31,4 @@ class LogInContainer extends HTMLElement {
     }
 }
 
-customElements.define("login-container", LogInContainer)
+customElements.define("log-container", LogInContainer)

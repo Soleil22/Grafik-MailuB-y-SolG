@@ -76,5 +76,5 @@ class RectangleInformation extends HTMLElement {
 }
 }
 
-customElements.define("Rectangle-information", RectangleInformation)
+customElements.define("rectangle-information", RectangleInformation)
 export default RectangleInformation
