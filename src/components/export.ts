@@ -8,3 +8,4 @@ export {default as CategoriesMain} from "./dashBoardComponents/mainCategories/ca
 export {default as ProjectCard} from "./dashBoardComponents/ProjectCard/ProjectCard"
 export {default as Footer} from "./dashBoardComponents/footer/footer"
 export {default as RectangleInformation} from "./LogInComponents/RectangleInformation/RectangleInformation"
+export {default as InputText} from "./LogInComponents/InputText/InputText"
