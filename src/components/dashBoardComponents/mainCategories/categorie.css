@@ -1,0 +1,9 @@
+.btnCategorie{
+    border-color: transparent;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 1.6875rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}

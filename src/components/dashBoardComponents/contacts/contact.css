@@ -1,0 +1,21 @@
+.username{
+    font-size: 0.9rem;
+    padding-top: 2.4%;
+    color: #D9D9D9;
+    font-weight: 500;
+}
+
+.profileImage{
+    border-radius: 8%;
+    background-color: ivory;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.Contact{
+    display: flex;
+    gap: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 1.7rem;
+    padding-top: 1rem;
+}

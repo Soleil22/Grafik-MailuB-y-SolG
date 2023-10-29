@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0%;
+}
+
+/* .dashboard{
+    width: 80vw;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: flex;
+} */
+
+/* .navLeft{
+    width: 20%;
+    height: 270vh;
+    gap: 5rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #1B1B1B 84.19%, #9000FA 109.17%);
+    mix-blend-mode: hard-light;
+} */
+
+.contactContainer{
+    margin-top: 10rem;
+}
+
+.textoContacto{
+    color: white;
+    text-align: center;
+}
+
+.containerActivity{
+    margin-top: 5rem;
+}
+
+.tittleActivity{
+    color: white;
+    text-align: center;
+}
+
+.textActivity{
+    color: white;
+    font-weight: 300;
+    width: 15rem;
+    margin-left: 2.5rem;
+}
+
+.moreGrafik{
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 25rem;
+}
+
+.contenedor-papa-banner{
+    display: flex;
+    align-content: end;
+    margin-top: 8rem;
+    margin-left: -35rem;
+}
+
+.comentario-dashboard{
+    margin-top: 91rem;
+    position: absolute;
+    margin-left: 27rem;
+}
+
+.titulo-comentario{
+    font-family: 'Sora', sans-serif;
+    position: absolute;
+    padding-top: 105rem;
+    padding-left: 55rem;
+    text-align: end;
+    width: 33rem;
+}
+

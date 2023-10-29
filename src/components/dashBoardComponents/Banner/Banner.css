@@ -1,0 +1,90 @@
+.img1{
+    width: 8.3125rem;
+    height: 7.3125rem;
+    flex-shrink: 0;
+    position: absolute;
+    margin-left: 60rem;
+    margin-top: -20rem;
+    filter: contrast(110%);
+}
+.img2{
+    width: 6.125rem;
+    height: 5.2005rem;
+    flex-shrink: 0;
+    position: absolute;
+    margin-left: 67rem;
+    margin-top: -14rem;
+    filter: contrast(110%);
+}
+
+
+.img3{
+    width: 4.1315rem;
+    height: 6.42838rem;
+    transform: rotate(21.706deg);
+    flex-shrink: 0;
+    position: absolute;
+    margin-left: 56rem;
+    margin-top: -12rem;
+    filter: contrast(110%);
+}
+.img4{
+    width: 12.125rem;
+    height: 9.0625rem;
+    flex-shrink: 0;
+    position: absolute;
+    margin-left: 59rem;
+    margin-top: -8.6rem;
+    filter: contrast(110%);
+}
+.img5{
+    width: 7.75rem;
+    height: 7.75rem;
+    flex-shrink: 0;
+    position: absolute;
+    margin-left: 52rem;
+    margin-top: -1.5rem;
+    filter: contrast(110%);
+    }
+.banner-background h2{
+    color: #B9E901;
+    font-family: 'Sora', sans-serif;
+    font-size: 2.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.07344rem;
+    padding-left: 5rem;
+    padding-top: 3rem;
+    width: 25.0625rem;
+}
+
+.banner-background{
+    width: 65vw;
+    height: 21.5625rem;
+    flex-shrink: 0;
+    border-radius: 1.9375rem;
+    background: linear-gradient(263deg, #601FEB 1.5%, #111 68.34%);
+    position: relative;
+    }
+/* .contenedor-papa-banner{
+    display: flex;
+    margin-top: 20rem;
+    margin-left: 8rem;
+} */
+.banner-background p{
+    color: #FFF;
+    font-family: 'Sora', sans-serif;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: -0.02344rem;
+    position: absolute;
+    margin-left: 5rem;
+    margin-top: 3rem;
+
+}
+
+.geometric-figures{
+    margin-left: -13rem;
+}

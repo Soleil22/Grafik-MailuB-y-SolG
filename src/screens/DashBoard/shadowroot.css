@@ -1,0 +1,130 @@
+body{
+     margin: 0%;
+     background-color: #DFDFDF;
+}
+
+.dashboard{
+    width: 80vw;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: flex;
+}
+.contenedor-papa-navup{
+   margin-top: 2rem;
+   width: 80%;
+}
+
+.navLeft{
+    width: 20%;
+    height: 290vh;
+    gap: 5rem;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #1B1B1B 84.19%, #9000FA 109.17%);
+    margin-top: -62rem;
+}
+
+.contenedor-carta-papa{
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); */
+    overflow-y: scroll;
+    width: 400rem;
+    height: 20rem;
+    margin-top: 42rem;
+    margin-left: -61rem; 
+} 
+
+::-webkit-scrollbar{
+    height: 8.5px;
+    margin-top: 5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1B1B1B;
+    border-radius: 2rem;
+
+}
+
+.titulo-de-cards{
+    position: absolute;
+    z-index: 1;
+    color: #000;
+    font-family: 'Sora', sans-serif;
+    font-size: 2.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.07344rem;
+    margin-top: -6rem;
+    
+}
+
+.subtitulo-cards{
+    position: absolute;
+    z-index: 1;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    margin-left: .9rem;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.02344rem;
+    margin-top: -2rem;
+  
+    }
+
+    .titulo-de-categories{
+        color: #000;
+        font-family: 'Sora', sans-serif;
+        font-size: 2.9375rem;
+        letter-spacing: -0.07344rem;
+        position: absolute;
+        margin-left: 28rem;
+        margin-top: -10rem;
+    }
+    
+    .texto-main-categories{
+        font-family: 'Poppins', sans-serif;
+        margin-left: 28.2rem;
+        margin-top: -4.8rem;
+    }
+    
+    .textContainerCategorie{
+        display: flex;
+        position: absolute;
+        margin-top: 78rem;
+    }
+
+    .mainCategorie{
+        margin-top: 78rem;
+        position: absolute;
+        display: flex;
+        width: 10rem;
+        margin-left: 70rem;
+        flex-direction: row-reverse;
+        gap: 16px;
+        z-index: 1;
+        padding-top: 3.68px;
+        
+    }
+
+    .titulo-seccion-comentarios{
+        margin-top: 85rem;
+        width: 40rem;
+        padding-left: 48rem;
+        text-align: end;
+        position: absolute;
+        font-size: 2.5rem;
+        font-family: 'Sora', sans-serif;
+    }
+    .footer-container{
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        margin-top: -4rem;
+        margin-left: 34.5rem;
+        width: 60rem;
+    }
+
+    
+    

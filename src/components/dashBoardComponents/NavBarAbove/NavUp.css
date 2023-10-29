@@ -1,0 +1,65 @@
+.nav-bar-container{
+    margin-left: 25rem;
+    margin-bottom: -2.7rem;
+    display: flex;
+    padding-left: 2rem;
+    }
+    
+    .barra{
+        border-radius: .6rem;
+        border: 1px solid #000;
+        background: #B9E901;
+        min-width:26.125vw;
+        font-family: 'Poppins', sans-serif;
+        font-size: .9rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: 2.6rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+    }
+    
+    .icons-container{
+        display: flex;
+        gap: 1rem;
+        margin-left: 20rem;
+    }
+    .app-img{
+        width: 2rem;
+        height: 2rem;
+    
+    }
+    .bell-img{
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .lupa{
+        position: absolute;
+        z-index: 1;
+        margin-left: .78rem;
+        margin-top: .72rem;
+    }
+    
+    .icons-container button{
+        border-radius: 0.625rem;
+        background: #601FEB;
+        width: 6.375rem;
+        height: 2.25rem;
+        flex-shrink: 0;
+        border-style: none;
+        color: rgb(255, 255, 255);
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.89rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.09375rem;
+        }
+    
+    .icons-container button:hover{
+        background: #B9E901;
+        color: black
+    
+    }
