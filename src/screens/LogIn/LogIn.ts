@@ -15,7 +15,7 @@ class LogInContainer extends HTMLElement {
     render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
-            <p>Hello</p>
+            
             `
             //Rectangle with information
             const RectangleContainer = this.ownerDocument.createElement("rectangle-information") as RectangleInformation
@@ -27,6 +27,7 @@ class LogInContainer extends HTMLElement {
             RectangleContainer.setAttribute(LogInAttributes.logo2, "https://static-00.iconduck.com/assets.00/google-logo-icon-2014x2048-hsbglouz.png")
             RectangleContainer.setAttribute(LogInAttributes.logo3, "https://www.svgrepo.com/show/108614/linkedin.svg")
             RectangleContainer.setAttribute(LogInAttributes.textsmall, "or use your email")
+            this.shadowRoot.appendChild(RectangleContainer)         
         }
     }
 }

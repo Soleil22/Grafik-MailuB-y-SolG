@@ -56,24 +56,23 @@ class RectangleInformation extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditRectangleInformationCss}</style>
+            <div class="container">
             <div class="rectangle-container">
-                <div>
                     <h3 class="grafik-text">${this.grafik}</h3>
-                </div>
-                <div>
                     <img src="${this.logo}" alt="" class= "logo-grafik">
                     <h3 class="text-welcome-join">${this.text}</h3>
                     <div class="container-button">
-                    <button class="social-media-buttons">${this.logo1}</button>
-                    <button class="social-media-buttons">${this.logo2}</button>
-                    <button class="social-media-buttons">${this.logo3}</button>
+                    <img src="${this.logo1}" alt="" class= "social-media-buttons1">
+                    <img src="${this.logo2}" alt="" class= "social-media-buttons2">
+                    <img src="${this.logo3}" alt="" class= "social-media-buttons3">
                     </div>
                     <p class="small-text">${this.textsmall}</p>
                 </div>
             </div>
+            </div>
             `
+        }
     }
-}
 }
 
 customElements.define("rectangle-information", RectangleInformation)

@@ -1,5 +1,6 @@
 import "./components/export"
 import "./screens/DashBoard/DashBoardIndex"
+import "./screens/LogIn/LogIn"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -17,8 +18,8 @@ class AppContainer extends HTMLElement {
             <log-container></log-container>
             `
         }
-        }
     }
+}
 
 
 customElements.define('app-container', AppContainer)
