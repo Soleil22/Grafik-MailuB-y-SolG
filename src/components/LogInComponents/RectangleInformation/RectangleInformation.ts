@@ -50,16 +50,15 @@ class RectangleInformation extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditRectangleInformationCss}</style>
-            <div class="footer-container">
+            <div class="rectangle-container">
                 <div>
-                    <h3 class="logoFooter">${this.logo}</h3>
+                    <h3 class="grafik-text">${this.grafik}</h3>
                 </div>
                 <div>
-                    <a class="opcionesFooter" href="">${this.options1}</a>
-                    <a class="opcionesFooter" href="">${this.options2}</a>
-                    <a class="opcionesFooter" href="">${this.options3}</a>
-                    <a class="opcionesFooter" href="">${this.options4}</a>
-                    <a class="opcionesFooter" href="">${this.options5}</a>
+                    <img src="${this.logo}" alt="" class= "logo-grafik">
+                    <h3 class="text-welcome-join">${this.text}</h3>
+                    <img src="${this.logos}" alt="" class= "logos-redes">
+                    <p class="small-text">${this.textsmall}</p>
                 </div>
             </div>
             `
