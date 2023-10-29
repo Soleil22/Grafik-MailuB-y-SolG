@@ -1,22 +1,15 @@
 import EditInputTextCss from "./InputText.css"
 
 export enum InputTextAttributes {
-    "email" = "email",
-    "password"="password",
-    "text"="text",
+    "text"="text"
 }
 
 class InputText extends HTMLElement {
-
-    email?:  string
-    password?: string
     text?:  string
 
     static get observedAttributes(){
         const attrs: Record<InputTextAttributes,null>={
-            email: null,
-            password: null,
-            text: null,
+            text: null
         }
         return Object.keys(attrs)
     }
@@ -44,6 +37,10 @@ class InputText extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditInputTextCss}</style>
+            <div>
+            <input type="text" placeholder="${this.text}">
+            <input type="password" placeholder="${this.text}">
+            </div>
             `
         }
     }
