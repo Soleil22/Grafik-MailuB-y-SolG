@@ -40,9 +40,9 @@ class InputText extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditInputTextCss}</style>
-            <div>
-            <input type="text" placeholder="${this.text}">
-            <input type="password" placeholder="${this.text2}">
+            <div class="container-input">
+            <input class="input" type="text" placeholder="${this.text}">
+            <input class="input" type="password" placeholder="${this.text2}">
             </div>
             `
         }

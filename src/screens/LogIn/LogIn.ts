@@ -33,6 +33,8 @@ class LogInContainer extends HTMLElement {
             const InputText = this.ownerDocument.createElement("input-text") as InputText
             InputText.classList.add("input-text")
             InputText.setAttribute(InputTextAttributes.text, "email")
+            InputText.setAttribute(InputTextAttributes.text2, "password")
+            this.shadowRoot.appendChild(InputText)
         }
     }
 }
