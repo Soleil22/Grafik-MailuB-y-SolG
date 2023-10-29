@@ -4,7 +4,9 @@ export enum LogInAttributes {
     "grafik" = "grafik",
     "logo"="logo",
     "text"="text",
-    "logos"="logos",
+    "logo1"="logo1",
+    "logo2"="logo2",
+    "logo3"="logo3",
     "textsmall"="textsmall"
 }
 
@@ -13,15 +15,19 @@ class RectangleInformation extends HTMLElement {
     grafik?:  string
     logo?: string
     text?:  string
-    logos?:  string
-    textsmall?:  string
+    logo1?:  string
+    logo2?: string
+    logo3?: string
+    textsmall?: string
 
     static get observedAttributes(){
         const attrs: Record<LogInAttributes,null>={
             grafik: null,
             logo: null,
             text: null,
-            logos: null,
+            logo1: null,
+            logo2: null,
+            logo3: null,
             textsmall: null,
         }
         return Object.keys(attrs)
@@ -57,7 +63,11 @@ class RectangleInformation extends HTMLElement {
                 <div>
                     <img src="${this.logo}" alt="" class= "logo-grafik">
                     <h3 class="text-welcome-join">${this.text}</h3>
-                    <img src="${this.logos}" alt="" class= "logos-redes">
+                    <div class="container-button">
+                    <button class="social-media-buttons">${this.logo1}</button>
+                    <button class="social-media-buttons">${this.logo2}</button>
+                    <button class="social-media-buttons">${this.logo3}</button>
+                    </div>
                     <p class="small-text">${this.textsmall}</p>
                 </div>
             </div>

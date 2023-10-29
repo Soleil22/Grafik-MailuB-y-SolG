@@ -20,6 +20,8 @@ class LogInContainer extends HTMLElement {
             RectangleContainer.classList.add("Rectangle-information")
             RectangleContainer.setAttribute(LogInAttributes.grafik, "Grafik.com")
             RectangleContainer.setAttribute(LogInAttributes.logo, "https://cdn-icons-png.flaticon.com/512/106/106226.png")
+            RectangleContainer.setAttribute(LogInAttributes.text, "Welcome!")
+            
         }
     }
 }
