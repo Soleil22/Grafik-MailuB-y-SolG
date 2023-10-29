@@ -14,7 +14,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <main-container></main-container>
+            
             `
         }
         }
@@ -22,3 +22,5 @@ class AppContainer extends HTMLElement {
 
 
 customElements.define('app-container', AppContainer)
+
+//<main-container></main-container>

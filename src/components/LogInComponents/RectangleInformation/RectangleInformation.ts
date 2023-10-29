@@ -1,6 +1,6 @@
 import EditRectangleInformationCss from "./RectangleInformation.css"
 
-export enum FooterAttributes {
+export enum LogInAttributes {
     "grafik" = "grafik",
     "logo"="logo",
     "text"="text",
@@ -17,7 +17,7 @@ class RectangleInformation extends HTMLElement {
     textsmall?:  string
 
     static get observedAttributes(){
-        const attrs: Record<FooterAttributes,null>={
+        const attrs: Record<LogInAttributes,null>={
             grafik: null,
             logo: null,
             text: null,
@@ -27,7 +27,7 @@ class RectangleInformation extends HTMLElement {
         return Object.keys(attrs)
     }
 
-    attributeChangedCallback(propName:FooterAttributes,oldValue: string | undefined,newValue: string | undefined){
+    attributeChangedCallback(propName:LogInAttributes,oldValue: string | undefined,newValue: string | undefined){
         switch(propName){
             default: 
             this[propName] = newValue;
