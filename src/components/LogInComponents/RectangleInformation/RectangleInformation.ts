@@ -58,16 +58,17 @@ class RectangleInformation extends HTMLElement {
             <style>${EditRectangleInformationCss}</style>
             <div class="container">
             <div class="rectangle-container">
+                    <div class="text-container">
                     <h3 class="grafik-text">${this.grafik}</h3>
                     <img src="${this.logo}" alt="" class= "logo-grafik">
                     <h3 class="text-welcome-join">${this.text}</h3>
+                    </div>
                     <div class="container-button">
                     <img src="${this.logo1}" alt="" class= "social-media-buttons1">
                     <img src="${this.logo2}" alt="" class= "social-media-buttons2">
                     <img src="${this.logo3}" alt="" class= "social-media-buttons3">
                     </div>
                     <p class="small-text">${this.textsmall}</p>
-                </div>
             </div>
             </div>
             `
