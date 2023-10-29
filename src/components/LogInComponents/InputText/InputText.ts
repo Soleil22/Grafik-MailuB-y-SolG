@@ -1,15 +1,18 @@
 import EditInputTextCss from "./InputText.css"
 
 export enum InputTextAttributes {
-    "text"="text"
+    "text"="text",
+    "text2"="text2"
 }
 
 class InputText extends HTMLElement {
     text?:  string
+    text2?:  string
 
     static get observedAttributes(){
         const attrs: Record<InputTextAttributes,null>={
-            text: null
+            text: null,
+            text2: null
         }
         return Object.keys(attrs)
     }
@@ -39,7 +42,7 @@ class InputText extends HTMLElement {
             <style>${EditInputTextCss}</style>
             <div>
             <input type="text" placeholder="${this.text}">
-            <input type="password" placeholder="${this.text}">
+            <input type="password" placeholder="${this.text2}">
             </div>
             `
         }

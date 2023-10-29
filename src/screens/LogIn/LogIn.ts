@@ -1,5 +1,6 @@
 import * as components from "../../components/export" 
 import RectangleInformation, {LogInAttributes} from "../../components/LogInComponents/RectangleInformation/RectangleInformation"
+import InputText, {InputTextAttributes} from "../../components/LogInComponents/InputText/InputText"
 
 class LogInContainer extends HTMLElement {
 
@@ -27,7 +28,11 @@ class LogInContainer extends HTMLElement {
             RectangleContainer.setAttribute(LogInAttributes.logo2, "https://static-00.iconduck.com/assets.00/google-logo-icon-2014x2048-hsbglouz.png")
             RectangleContainer.setAttribute(LogInAttributes.logo3, "https://www.svgrepo.com/show/108614/linkedin.svg")
             RectangleContainer.setAttribute(LogInAttributes.textsmall, "or use your email")
-            this.shadowRoot.appendChild(RectangleContainer)        
+            this.shadowRoot.appendChild(RectangleContainer)  
+            
+            const InputText = this.ownerDocument.createElement("input-text") as InputText
+            InputText.classList.add("input-text")
+            InputText.setAttribute(InputTextAttributes.text, "email")
         }
     }
 }
