@@ -48,7 +48,12 @@
     width: 3.3rem;
     height: 3.3rem;
     position: relative;
-    margin-top: 1rem;
+}
+
+.bck-img4{
+    transform: rotate(-27.811deg);
+    margin-top: -30rem;
+    margin-left: 14rem;
 }
 
 .bck-img5 img{
