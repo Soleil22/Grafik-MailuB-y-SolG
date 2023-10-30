@@ -55,13 +55,27 @@ class Decoration extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditDecorationCss}</style>
-            <img src="${this.img1}" alt="" class="img1">
+            <div class="bck-img1">
+            <img src="${this.img1}" alt="">
+            </div>
+            <div class="bck-img2">
             <img src="${this.img2}" alt="" class="img2">
+            </div>
+            <div class="bck-img3">
             <img src="${this.img3}" alt="" class="img3">
+            </div>
+            <div class="bck-img4">
             <img src="${this.img4}" alt="" class="img4">
+            </div>
+            <div class="bck-img5">
             <img src="${this.img5}" alt="" class="img5">
+            </div>
+            <div class="bck-img6">
             <img src="${this.img6}" alt="" class="img5">
+            </div>
+            <div class="bck-img7">
             <img src="${this.img7}" alt="" class="img5">
+            </div>
             `
         }
     }

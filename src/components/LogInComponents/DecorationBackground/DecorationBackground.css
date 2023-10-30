@@ -1,0 +1,9 @@
+.bck-img1 img {
+    border-radius: 50%;
+    background-color: #C8FFAB;
+    border: 4px solid #601FEB;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
