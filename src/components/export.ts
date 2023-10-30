@@ -11,3 +11,4 @@ export {default as RectangleInformation} from "./LogInComponents/RectangleInform
 export {default as InputText} from "./LogInComponents/InputText/InputText"
 export {default as ButtonsLogin} from "./LogInComponents/Buttons/Buttons"
 export {default as DecorationBackground} from "./LogInComponents/DecorationBackground/DecorationBackground"
+export {default as Inputs} from "./SignUpComponents/Inputs/Inputs"

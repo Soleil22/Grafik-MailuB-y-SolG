@@ -2,6 +2,7 @@ import * as components from "../../components/export"
 import EditSignUpCss from "./SignUpStyle.css"
 import RectangleInformation, {LogInAttributes} from "../../components/LogInComponents/RectangleInformation/RectangleInformation"
 import DecorationBackground, {DecorationAttributes}  from "../../components/LogInComponents/DecorationBackground/DecorationBackground"
+import Inputs, {InputSignAttributes} from "../../components/SignUpComponents/Inputs/Inputs"
 
 class SignUpContainer extends HTMLElement {
 
