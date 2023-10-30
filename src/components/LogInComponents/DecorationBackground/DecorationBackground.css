@@ -72,11 +72,16 @@
 
 .bck-img6 img{
     border-radius: 50%;
-    border: 4px solid #B9E901;
-    width: 3.3rem;
-    height: 3.3rem;
-    position: relative;
-    margin-top: 1rem;
+    border: 0.5rem solid #B9E901;
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.bck-img6{ 
+    transform: rotate(44.423deg);
+    margin-left: 70rem;
+    margin-top: -15rem;
+    position: absolute;
 }
 
 .bck-img7 img{
