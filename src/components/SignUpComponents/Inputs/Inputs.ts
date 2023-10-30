@@ -49,8 +49,8 @@ class InputText extends HTMLElement {
             <div class="container-input">
             <input class="input" type="text" placeholder="${this.text}">
             <input class="input" type="text" placeholder="${this.text2}">
-            <input class="input" type="password" placeholder="${this.text2}">
-            <input class="input" type="password" placeholder="${this.text2}">
+            <input class="input" type="password" placeholder="${this.pass}">
+            <input class="input" type="password" placeholder="${this.pass2}">
             </div>
             `
         }

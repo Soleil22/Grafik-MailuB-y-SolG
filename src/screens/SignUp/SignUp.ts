@@ -45,6 +45,13 @@ class SignUpContainer extends HTMLElement {
             this.shadowRoot.appendChild(decoration)
 
             //inputs text
+            const InputText = this.ownerDocument.createElement("input-text-sign") as Inputs
+            InputText.classList.add("input-text")
+            InputText.setAttribute(InputSignAttributes.text, "email")
+            InputText.setAttribute(InputSignAttributes.text2, "full name")
+            InputText.setAttribute(InputSignAttributes.pass, "new password")
+            InputText.setAttribute(InputSignAttributes.pass2, "repeat password")
+            this.shadowRoot.appendChild(InputText)
         }
     }
 }
