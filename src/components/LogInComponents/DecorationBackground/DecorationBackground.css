@@ -7,3 +7,12 @@
     position: relative;
     margin-top: 1rem;
 }
+
+.bck-img2 img{
+    border-radius: 50%;
+    background-color: #B9E901;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
