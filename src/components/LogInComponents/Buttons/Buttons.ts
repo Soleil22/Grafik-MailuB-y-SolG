@@ -46,7 +46,7 @@ class ButtonsLogin extends HTMLElement {
             <div class="container-buttons">
             <button class="button-login">${this.textlogin}</button>
             <div class="container-signup">
-            <a class="link-account"href="">${this.remember}</a>
+            <a class="link-account" href="">${this.remember}</a>
             <button class="button-signup">${this.textsignup}</button>
             </div>
             </div>
