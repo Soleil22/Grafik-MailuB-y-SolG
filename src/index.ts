@@ -1,6 +1,7 @@
 import "./components/export"
 import "./screens/DashBoard/DashBoardIndex"
 import "./screens/LogIn/LogIn"
+import "./screens/SignUp/SignUp"
 
 class AppContainer extends HTMLElement {
     constructor(){
