@@ -16,3 +16,48 @@
     position: relative;
     margin-top: 1rem;
 }
+
+.bck-img3 img{
+    border-radius: 50%;
+    background-color: #EDEDED;
+    border: 4px solid #B9E901;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.bck-img4 img{
+    border-radius: 50%;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.bck-img5 img{
+    border-radius: 50%;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.bck-img6 img{
+    border-radius: 50%;
+    border: 4px solid #B9E901;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.bck-img7 img{
+    border-radius: 50%;
+    background-color: #B9E901;
+    border: 4px solid #601FEB;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
