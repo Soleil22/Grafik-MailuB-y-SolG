@@ -9,3 +9,4 @@ export {default as ProjectCard} from "./dashBoardComponents/ProjectCard/ProjectC
 export {default as Footer} from "./dashBoardComponents/footer/footer"
 export {default as RectangleInformation} from "./LogInComponents/RectangleInformation/RectangleInformation"
 export {default as InputText} from "./LogInComponents/InputText/InputText"
+export {default as ButtonsLogin} from "./LogInComponents/Buttons/Buttons"

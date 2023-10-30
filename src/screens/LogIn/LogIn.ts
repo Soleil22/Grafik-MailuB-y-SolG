@@ -2,6 +2,7 @@ import * as components from "../../components/export"
 import EditLogInCss from "./LogInStyle.css"
 import RectangleInformation, {LogInAttributes} from "../../components/LogInComponents/RectangleInformation/RectangleInformation"
 import InputText, {InputTextAttributes} from "../../components/LogInComponents/InputText/InputText"
+import ButtonsLogin, {ButtonAttributes} from "../../components/LogInComponents/Buttons/Buttons"
 
 class LogInContainer extends HTMLElement {
 
