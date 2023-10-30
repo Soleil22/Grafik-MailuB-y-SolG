@@ -45,7 +45,7 @@ class ButtonsSignUp extends HTMLElement {
             <style>${EditButtonSignCss}</style>
             <div class="container-signup">
             <button class="button-signup">${this.textsignup}</button>
-            <p>${this.text}<a href=""> ${this.link}</a></p>
+            <p class="link">${this.text}<a class="link"href=""> ${this.link}</a></p>
             </div>
             `
         }

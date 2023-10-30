@@ -55,7 +55,12 @@ class SignUpContainer extends HTMLElement {
             this.shadowRoot.appendChild(InputText)
 
             //button sign
-            //const ButtonSign = this.ownerDocument.createElement("buttons-sign") as 
+            const ButtonSign = this.ownerDocument.createElement("buttons-sign") as Button
+            ButtonSign.classList.add("button-sign-edit")
+            ButtonSign.setAttribute(ButtonAttributes.textsignup, "SIGN UP")
+            ButtonSign.setAttribute(ButtonAttributes.text, "Already have an account?")
+            ButtonSign.setAttribute(ButtonAttributes.link, "Log in here")
+            this.shadowRoot.appendChild(ButtonSign)
         }
     }
 }
