@@ -1,14 +1,16 @@
 .bck-img1 img {
     border-radius: 50%;
     background-color: #C8FFAB;
-    border: 4px solid #601FEB;
-    width: 3.3rem;
-    height: 3.3rem;
+    border: 0.5rem solid #601FEB;
+    width: 6.5rem;
+    height: 6.5rem;
 }
 
-.bck-img2{
-    position: absolute;
+.bck-img1{
     transform: rotate(-34.308deg);
+    margin-left: 10rem;
+    position: absolute;
+    margin-top: -35rem;
 }
 
 .bck-img2 img{
@@ -23,7 +25,7 @@
     position: absolute;
     transform: rotate(17.805deg);
     margin-left: 17rem;
-    margin-top: -46rem;
+    margin-top: -43rem;
 }
 
 .bck-img3 img{
