@@ -1,13 +1,20 @@
 .container-buttons{
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .container-signup{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.button-login{
+.container-login{
+    display: flex;
+    align-items: center;
+}
+
+.container-login button{
     border-radius: 5.8125rem;
     background: #601FEB;
     font-family: 'Poppins', sans-serif;
@@ -21,7 +28,12 @@
     border: none;
 }
 
-.button-signup{
+.container-login button:hover{
+    background: #B9E901;
+    color: #601FEB;
+}
+
+.container-signup button{
     width: 5.8125rem;
     height: 2.5rem;
     border-radius: 5.8125rem;
@@ -33,6 +45,11 @@
     font-weight: 700;
     line-height: normal;
     border: none;
+}
+
+.container-signup button:hover{
+    background: #601FEB;
+    color: #B9E901;
 }
 
 .link-account{

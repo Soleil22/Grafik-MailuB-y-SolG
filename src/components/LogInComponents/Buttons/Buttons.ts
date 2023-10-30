@@ -43,12 +43,12 @@ class ButtonsLogin extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditButtonsCss}</style>
-            <div class="container-buttons">
+            <div class="container-login">
             <button class="button-login">${this.textlogin}</button>
+            </div>
             <div class="container-signup">
             <a class="link-account" href="">${this.remember}</a>
             <button class="button-signup">${this.textsignup}</button>
-            </div>
             </div>
             `
         }
