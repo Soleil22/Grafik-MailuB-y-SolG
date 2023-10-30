@@ -63,6 +63,9 @@ class LogInContainer extends HTMLElement {
             ButtonsLogIn.setAttribute(ButtonAttributes.remember, "Don't have an account yet?")
             ButtonsLogIn.setAttribute(ButtonAttributes.textsignup, "SIGN UP")
             this.shadowRoot.appendChild(ButtonsLogIn)
+
+            //background decoration
+            const decoration = this.ownerDocument.createElement("decoration-container") 
         }
     }
 }
