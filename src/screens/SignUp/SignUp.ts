@@ -3,6 +3,7 @@ import EditSignUpCss from "./SignUpStyle.css"
 import RectangleInformation, {LogInAttributes} from "../../components/LogInComponents/RectangleInformation/RectangleInformation"
 import DecorationBackground, {DecorationAttributes}  from "../../components/LogInComponents/DecorationBackground/DecorationBackground"
 import Inputs, {InputSignAttributes} from "../../components/SignUpComponents/Inputs/Inputs"
+import Button, {ButtonAttributes} from "../../components/SignUpComponents/Button/Button"
 
 class SignUpContainer extends HTMLElement {
 
@@ -52,6 +53,9 @@ class SignUpContainer extends HTMLElement {
             InputText.setAttribute(InputSignAttributes.pass, "new password")
             InputText.setAttribute(InputSignAttributes.pass2, "repeat password")
             this.shadowRoot.appendChild(InputText)
+
+            //button sign
+            //const ButtonSign = this.ownerDocument.createElement("buttons-sign") as 
         }
     }
 }
