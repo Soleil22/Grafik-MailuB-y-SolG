@@ -59,22 +59,22 @@ class Decoration extends HTMLElement {
             <img src="${this.img1}" alt="">
             </div>
             <div class="bck-img2">
-            <img src="${this.img2}" alt="" class="img2">
+            <img src="${this.img2}" alt="">
             </div>
             <div class="bck-img3">
-            <img src="${this.img3}" alt="" class="img3">
+            <img src="${this.img3}" alt="">
             </div>
             <div class="bck-img4">
-            <img src="${this.img4}" alt="" class="img4">
+            <img src="${this.img4}" alt="">
             </div>
             <div class="bck-img5">
-            <img src="${this.img5}" alt="" class="img5">
+            <img src="${this.img5}" alt="">
             </div>
             <div class="bck-img6">
-            <img src="${this.img6}" alt="" class="img5">
+            <img src="${this.img6}" alt="">
             </div>
             <div class="bck-img7">
-            <img src="${this.img7}" alt="" class="img5">
+            <img src="${this.img7}" alt="">
             </div>
             `
         }
