@@ -56,6 +56,11 @@ class LogInContainer extends HTMLElement {
             height: 0.9rem;
             }
             */
+
+            const ButtonsLogIn = this.ownerDocument.createElement("buttons-login") as ButtonsLogin
+            ButtonsLogIn.classList.add("Buttons-login")
+            ButtonsLogIn.setAttribute(ButtonAttributes.textlogin, "email")
+            ButtonsLogIn.setAttribute(InputTextAttributes.text2, "Don't have an account yet?")
             
         }
     }

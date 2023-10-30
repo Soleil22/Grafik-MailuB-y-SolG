@@ -44,10 +44,10 @@ class ButtonsLogin extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <style>${EditButtonsCss}</style>
             <div class="container-buttons">
-            <button class="button-login">LOG IN</button>
+            <button class="button-login">${this.textlogin}</button>
             <div class="container-signup">
-            <a class="link-account"href="">Don't have an account yet?</a>
-            <button class="button-signup">SIGN UP</button>
+            <a class="link-account"href="">${this.remember}</a>
+            <button class="button-signup">${this.textsignup}</button>
             </div>
             </div>
             `
