@@ -1,17 +1,15 @@
-.container-buttons{
-    display: flex;
-    flex-direction: column;
-}
 
 .container-signup{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2.5rem;
+    gap: 1rem;
 }
 
 .container-login{
-    display: flex;
-    align-items: center;
+    padding-left: 45.2rem;
+    padding-top: 2rem;
 }
 
 .container-login button{
@@ -19,12 +17,12 @@
     background: #601FEB;
     font-family: 'Poppins', sans-serif;
     color: #B9E901;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 5.8125rem;
-    height: 2.5rem;
+    width: 5rem;
+    height: 2rem;
     border: none;
 }
 
@@ -34,13 +32,13 @@
 }
 
 .container-signup button{
-    width: 5.8125rem;
-    height: 2.5rem;
+    width: 5rem;
+    height: 2rem;
     border-radius: 5.8125rem;
     background: #B9E901;
     color: #601FEB;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -55,7 +53,7 @@
 .link-account{
     color: #000;
     font-family: Poppins;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
