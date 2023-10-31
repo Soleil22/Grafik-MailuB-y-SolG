@@ -1,5 +1,6 @@
 import * as components from "../../components/export" 
 import EditPerfilUserCss from "./PerfilUser.css"
+import TarjetUser, {TarjetUserAttributes} from "../../components/PerfilUserComponents/TarjetUser/TarjetUser"
 
 class SignUpContainer extends HTMLElement {
 
