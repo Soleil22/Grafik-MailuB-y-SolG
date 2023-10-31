@@ -56,6 +56,28 @@ class TarjetUser extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
             <style>${EditTarjetUserCss}</style>
+            <div class="tarjet-user">
+            <img src="${this.perfil}" alt="">
+            <h4>${this.name}</h4>
+            <p>${this.profession}</p>
+            <div class="info-user">
+                <h5>Published projects</h5>
+                <p>${this.publish}</p>
+            </div>
+            <div class="info-user">
+                <h5>Bought projects</h5>
+                <p>${this.bought}</p>
+            </div>
+            <div class="info-user">
+                <h5>Followers</h5>
+                <p>${this.followers}</p>
+            </div>
+            <div class="info-user">
+                <h5>Friends</h5>
+                <p>${this.friends}</p>
+            </div>
+            <button>Change password</button>
+        </div>
             `
         }
     }

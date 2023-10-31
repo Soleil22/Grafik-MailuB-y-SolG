@@ -16,7 +16,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <sign-container></sign-container>
+            
             `
         }
     }
@@ -28,3 +28,5 @@ customElements.define('app-container', AppContainer)
 //<main-container></main-container>
 
 //<log-container></log-container>
+
+//<sign-container></sign-container>
