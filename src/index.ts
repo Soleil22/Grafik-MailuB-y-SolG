@@ -18,7 +18,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <perfil-container></perfil-container>
+            <perfil-post-container></perfil-post-container>
             `
         }
     }
@@ -32,5 +32,7 @@ customElements.define('app-container', AppContainer)
 //<log-container></log-container>
 
 //<perfil-container></perfil-container>
+
+//<perfil-post-container></perfil-post-container>
 
 //<sign-container></sign-container>
