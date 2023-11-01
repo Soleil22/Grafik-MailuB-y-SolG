@@ -25,16 +25,23 @@ class Tendencies extends HTMLElement {
             break;
         }
         
-        this.render();
+        this.mount();
         }
 
     constructor(){
         super()
         this.attachShadow({mode: "open"})
+        this.likeClick = this.likeClick.bind(this);
+        this.likebutton = "https://cdn-icons-png.flaticon.com/512/1077/1077035.png";
     }
 
     connectedCallback(){
-        this.render()
+        this.mount()
+    }
+
+    mount(){
+        this.render();
+        this.addEventListener();
     }
 
     render(){
@@ -52,7 +59,31 @@ class Tendencies extends HTMLElement {
         }
     }
 
+    isliked: boolean = false
+
+    addEventListener(){
+        if (this.shadowRoot){
+            const heart = this.shadowRoot.querySelectorAll(".heart");
+            heart.forEach((heart) => {
+                heart.addEventListener("click", this.likeClick);
+            });
+        }
+    }
+
+    likeClick = () => {
+        this.isliked = !this.isliked;
+        const heart = this.shadowRoot?.querySelectorAll(".heart") as NodeListOf<HTMLImageElement>;
+
+        heart.forEach((heart) => {
+        if (this.isliked) {
+            heart.src = "https://cdn-icons-png.flaticon.com/512/1077/1077086.png";
+        } else {
+            heart.src = "https://cdn-icons-png.flaticon.com/512/1077/1077035.png";
+        }});
+    };
 }
+
+
 
 customElements.define("post-tendency",Tendencies)
 export default Tendencies
