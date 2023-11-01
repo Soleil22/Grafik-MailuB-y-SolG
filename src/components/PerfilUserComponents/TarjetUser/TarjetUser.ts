@@ -57,9 +57,12 @@ class TarjetUser extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <style>${EditTarjetUserCss}</style>
             <div class="tarjet-user">
+            <div class="top-container">
             <img src="${this.perfil}" alt="">
             <h4>${this.name}</h4>
             <h2 class="profession">${this.profession}</h2>
+            </div>
+            <div class="div-container">
             <div class="info-user">
                 <h5>Published projects</h5>
                 <p>${this.publish}</p>
@@ -76,7 +79,10 @@ class TarjetUser extends HTMLElement {
                 <h5>Friends</h5>
                 <p>${this.friends}</p>
             </div>
+            </div>
+            <div class="button-container">
             <button>Change password</button>
+            </div>
         </div>
             `
         }
