@@ -1,0 +1,19 @@
+.tarjet-user img{
+    border-radius: 50%;
+    background-color: #B9E901;
+    border: 4px solid #FFF;
+    width: 7rem;
+    height: 7rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.tarjet-user{
+    background: linear-gradient(180deg, #601FEB 0%, #111 23.44%, #111 100%);
+    border-radius: 2rem;
+    width: 30.375rem;
+    height: 56.0625rem;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}

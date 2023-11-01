@@ -2,7 +2,7 @@ import "./components/export"
 import "./screens/DashBoard/DashBoardIndex"
 import "./screens/LogIn/LogIn"
 import "./screens/SignUp/SignUp"
-import "./screens/PerfilUser"
+import "./screens/PerfilUser/PerfilUser"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -29,5 +29,7 @@ customElements.define('app-container', AppContainer)
 //<main-container></main-container>
 
 //<log-container></log-container>
+
+//<perfil-container></perfil-container>
 
 //<sign-container></sign-container>
