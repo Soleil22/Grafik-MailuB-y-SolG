@@ -1,11 +1,11 @@
-import EditNaveUpCss from "./NavUp.css"
+import EditNaveUpCss from "./IconsNavUp.css"
 
 export enum NavUpAttribute {
     "appicon" = "appicon",
     "bell" = "bell"
 }
 
-class NavUp extends HTMLElement {
+class NavUpIcons extends HTMLElement {
     appicon?: string
     bell?: string
 
@@ -52,5 +52,5 @@ class NavUp extends HTMLElement {
     }
 }
 
-customElements.define("upper-navigator", NavUp)
-export default NavUp
+customElements.define("upper-navigator-icons", NavUpIcons)
+export default NavUpIcons
