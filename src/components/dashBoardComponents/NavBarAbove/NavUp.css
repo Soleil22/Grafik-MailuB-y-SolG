@@ -23,12 +23,14 @@
     .icons-container{
         display: flex;
         gap: 1rem;
-        margin-left: 20rem;
+        margin-left: 48rem;
     }
     .app-img{
         width: 2rem;
         height: 2rem;
-    
+        background-color:#B9E901;
+        border: 4px solid #B9E901;
+        border-radius: 50%;
     }
     .bell-img{
         width: 2rem;

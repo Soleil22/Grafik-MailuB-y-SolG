@@ -41,10 +41,6 @@ class NavUp extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <style>${EditNaveUpCss}</style>
             <div class="nav-bar-container">
-                <div class="search-bar-container">
-                    <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" alt="" width="20px" height="20px" class="lupa">
-                    <input type="text" placeholder="Search..." class="barra">
-                </div>
                 <div class="icons-container">
                     <img src="${this.bell}" alt="" class="bell-img">
                     <button>SIGN OFF</button>
