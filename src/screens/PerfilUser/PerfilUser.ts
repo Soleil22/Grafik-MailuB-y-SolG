@@ -2,6 +2,7 @@ import * as components from "../../components/export"
 import EditPerfilUserCss from "./PerfilUser.css"
 import TarjetUser, {TarjetUserAttributes} from "../../components/PerfilUserComponents/TarjetUser/TarjetUser"
 import NavUp, {NavUpAttribute} from "../../components/PerfilUserComponents/IconsNavUp/IconsNavUp";
+import ChangePassword, {InputChangeAttributes} from "../../components/PerfilUserComponents/ChangePassword/ChangePassword";
 
 class PerfilUser extends HTMLElement {
 
@@ -35,6 +36,12 @@ class PerfilUser extends HTMLElement {
             TarjetUser.setAttribute(TarjetUserAttributes.followers, "220")
             TarjetUser.setAttribute(TarjetUserAttributes.friends, "35")
             this.shadowRoot.appendChild(TarjetUser)  
+
+            const InputText = this.ownerDocument.createElement("input-text-change") as ChangePassword
+            InputText.classList.add("input-text-change")
+            InputText.setAttribute(InputChangeAttributes.text, "useremail@example.com")
+            InputText.setAttribute(InputChangeAttributes.text2, "*******")
+            this.shadowRoot.appendChild(InputText)
         }
     }
 }

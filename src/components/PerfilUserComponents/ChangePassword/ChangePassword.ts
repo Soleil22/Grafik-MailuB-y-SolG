@@ -41,10 +41,19 @@ class InputTextChange extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <style>${EditPasswordCss}</style>
             <div class="container-input">
+            <h1>Change password</h1>
+            <p>Email</p>
             <input class="input" type="text" placeholder="${this.text}">
+            <p>Old password</p>
             <input class="input" type="password" placeholder="${this.text2}">
+            <p>New password</p>
             <input class="input" type="password" placeholder="${this.text2}">
+            <p>Repeat password</p>
             <input class="input" type="password" placeholder="${this.text2}">
+            <div>
+            <button class="button">cancel change</button>
+            <button class="button">change password</button>
+            </div>
             </div>
             `
         }
