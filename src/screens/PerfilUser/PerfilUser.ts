@@ -1,7 +1,7 @@
 import * as components from "../../components/export" 
 import EditPerfilUserCss from "./PerfilUser.css"
 import TarjetUser, {TarjetUserAttributes} from "../../components/PerfilUserComponents/TarjetUser/TarjetUser"
-import NavUp, {NavUpAttribute} from "../../components/dashBoardComponents/NavBarAbove/navBarUp";
+import NavUp, {NavUpAttribute} from "../../components/PerfilUserComponents/IconsNavUp/IconsNavUp";
 
 class PerfilUser extends HTMLElement {
 
@@ -19,7 +19,7 @@ class PerfilUser extends HTMLElement {
             this.shadowRoot.innerHTML=`
             <style>${EditPerfilUserCss}</style>
             `
-            const NavUpDadContainer = this.ownerDocument.createElement("upper-navigator") as NavUp
+            const NavUpDadContainer = this.ownerDocument.createElement("upper-navigator-icons") as NavUp
             NavUpDadContainer.classList.add("contenedor-papa-navup")
             NavUpDadContainer.setAttribute(NavUpAttribute.appicon, "https://cdn-icons-png.flaticon.com/512/106/106226.png")
             NavUpDadContainer.setAttribute(NavUpAttribute.bell, "https://www.iconpacks.net/icons/2/free-bell-icon-3063-thumb.png" )

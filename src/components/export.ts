@@ -14,3 +14,4 @@ export {default as DecorationBackground} from "./LogInComponents/DecorationBackg
 export {default as Inputs} from "./SignUpComponents/Inputs/Inputs"
 export {default as Button} from "./SignUpComponents/Button/Button"
 export {default as TarjetUser} from "./PerfilUserComponents/TarjetUser/TarjetUser"
+export {default as IconsNavUp} from "./PerfilUserComponents/IconsNavUp/IconsNavUp"

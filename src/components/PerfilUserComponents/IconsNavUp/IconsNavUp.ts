@@ -52,5 +52,5 @@ class NavUpIcons extends HTMLElement {
     }
 }
 
-customElements.define("upper-navigator", NavUpIcons)
+customElements.define("upper-navigator-icons", NavUpIcons)
 export default NavUpIcons
