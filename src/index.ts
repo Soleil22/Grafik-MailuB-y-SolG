@@ -17,7 +17,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <main-container></main-container>
+            <perfil-container></perfil-container>
             `
         }
     }
