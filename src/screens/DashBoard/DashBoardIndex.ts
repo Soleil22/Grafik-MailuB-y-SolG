@@ -153,7 +153,7 @@ class Container extends HTMLElement {
                 comentarioMain.classList.add("comentario-dashboard")
                 comentarioMain.setAttribute(ProjectAttribute.nameuser, "@mailubb")
                 comentarioMain.setAttribute(ProjectAttribute.descrip, "painting in bora bora")
-                    comentarioMain.setAttribute(ProjectAttribute.project, "https://s3-alpha-sig.figma.com/img/dbce/582c/078c7e1345b721c72aeb97e960f2bf38?Expires=1696204800&Signature=gpLLPJDODxdivn8cyF7-QbicGyK6glA5R2dcpbulQg~nNhP6-VWYeaesZemNRO-6Xuj2RIhV0slSDPe3FnuCPesx-3YqZq~O-xRHLumqLjH4J9iJGWFDriy2fvRrrCRwJ49K~Zwi57493MVETvOvtnMuK-1BkHI7t2FkkgPXjAZRWU5FeMRiJ52-NKX25ecGQ-B2XD3XilAaOIyfOGQjA-qY-9AHeE-KRWhHDHqCryH6sXKckNG38owMkz0ESO771DuJ8SQyXTgJUZyXFAJ4fXisBsbG4roskV-CCFV728ZL~xy4DLigB2vVPwULJPDb4tRoA~M6dOcokTo38-SOjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+                comentarioMain.setAttribute(ProjectAttribute.project, "https://s3-alpha-sig.figma.com/img/dbce/582c/078c7e1345b721c72aeb97e960f2bf38?Expires=1696204800&Signature=gpLLPJDODxdivn8cyF7-QbicGyK6glA5R2dcpbulQg~nNhP6-VWYeaesZemNRO-6Xuj2RIhV0slSDPe3FnuCPesx-3YqZq~O-xRHLumqLjH4J9iJGWFDriy2fvRrrCRwJ49K~Zwi57493MVETvOvtnMuK-1BkHI7t2FkkgPXjAZRWU5FeMRiJ52-NKX25ecGQ-B2XD3XilAaOIyfOGQjA-qY-9AHeE-KRWhHDHqCryH6sXKckNG38owMkz0ESO771DuJ8SQyXTgJUZyXFAJ4fXisBsbG4roskV-CCFV728ZL~xy4DLigB2vVPwULJPDb4tRoA~M6dOcokTo38-SOjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
                 comentarioMain.setAttribute(ProjectAttribute.send, "https://static.thenounproject.com/png/1015120-200.png")
                 dashboard.appendChild(comentarioMain)
 

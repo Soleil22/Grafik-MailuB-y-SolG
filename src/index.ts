@@ -4,6 +4,7 @@ import "./screens/LogIn/LogIn"
 import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
+import "./screens/Shop/Shop"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -36,3 +37,5 @@ customElements.define('app-container', AppContainer)
 //<perfil-post-container></perfil-post-container>
 
 //<sign-container></sign-container>
+
+//<shop-container></shop-container>
