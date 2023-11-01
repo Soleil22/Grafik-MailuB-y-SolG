@@ -59,7 +59,7 @@ class TarjetUser extends HTMLElement {
             <div class="tarjet-user">
             <img src="${this.perfil}" alt="">
             <h4>${this.name}</h4>
-            <p>${this.profession}</p>
+            <h2 class="profession">${this.profession}</h2>
             <div class="info-user">
                 <h5>Published projects</h5>
                 <p>${this.publish}</p>
