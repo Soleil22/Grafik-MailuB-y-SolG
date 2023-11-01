@@ -3,6 +3,7 @@ import "./screens/DashBoard/DashBoardIndex"
 import "./screens/LogIn/LogIn"
 import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
+import "./screens/PerfilPost/PerfilPost"
 
 class AppContainer extends HTMLElement {
     constructor(){
