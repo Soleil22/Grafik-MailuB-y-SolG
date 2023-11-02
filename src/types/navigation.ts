@@ -1,0 +1,9 @@
+export enum Screens {
+    LOGIN = "LOGIN",
+    DASHBOARD = "DASHBOARD",
+    SIGNUP = "SIGNUP",
+    SHOP = "SHOP",
+    PERFILUSER = "PERFILUSER",
+    USERPOST = "USERPOST",
+    PUBLICATIONS = "PUBLICATIONS"
+}
