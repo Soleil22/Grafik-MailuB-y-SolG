@@ -5,6 +5,7 @@ import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
 import "./screens/Shop/Shop"
+import "./screens/Tendencies/tendencies"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -19,7 +20,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <main-container></main-container>
+            <tendencies-container></tendencies-container>
             `
         }
     }
@@ -39,3 +40,5 @@ customElements.define('app-container', AppContainer)
 //<sign-container></sign-container>
 
 //<shop-container></shop-container>
+
+//<tendencies-container></tendencies-container>
