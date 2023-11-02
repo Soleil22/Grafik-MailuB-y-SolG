@@ -3,10 +3,12 @@ import NavUp, {NavUpAttribute} from "../../components/dashBoardComponents/NavBar
 import NavLeft, {NavLeftAttributes} from "../../components/dashBoardComponents/navLeft/navLeft"
 import Tendencies,{TendencyAttributes} from "../../components/tendenciesPostsComponents/tendencyPost/tendencyPost";
 import { tendenciesData } from "../../data/tendenciesPostData";
+import EditMainCss from "../DashBoard/main.css"
+import EditShadowCss from "../DashBoard/shadowroot.css"
 
 class TendenciesScreen extends HTMLElement{
 
-    posts: Tendencies[]=[]
+    // posts: Tendencies[]=[]
 
     constructor(){
         super()
@@ -21,7 +23,10 @@ class TendenciesScreen extends HTMLElement{
 
     render(){
         if(this.shadowRoot){
-            this.shadowRoot.innerHTML=``
+            this.shadowRoot.innerHTML=`
+            <style>${EditMainCss}</style>
+            <style>${EditShadowCss}</style>
+            `
 
             const dashboard = this.ownerDocument.createElement("section-dashboard")
             dashboard.classList.add("dashboard")
@@ -33,6 +38,12 @@ class TendenciesScreen extends HTMLElement{
             dashboard.appendChild(NavUpDadContainer)
             this.shadowRoot.appendChild(dashboard);
 
+            //posts en tendencia
+            const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
+                postDesigner.setAttribute(TendencyAttributes.post, "https://s3-alpha-sig.figma.com/img/a717/261c/c0d0c90dc163ca7a878ac1e4dc5d0e10?Expires=1699833600&Signature=QjFcF0tKAHUcA5z9mm8~fwnuCftVdsI7UrWGE-yfPZoe6uAD8AtkzI8BqJjrX7Kmr7AMEH7lFld7BtrTVxkCWQpdP6DD1ku660lzYZ7CaPY5w9-137p5LuC398x3O7PqoTTgvxueemmjBxcv-QsLOMGeBxYjqX3gthW-1i0AsJzQAbP6tlFNmMGXOHj5fHWpNsM-QlGEEap~kBAhXaA2tOncYRwghMRfK7rN3VIv1mzBzcXwRDzeyeeMm6Y34svuyAZDurA1DLokjmRFf3SP~6Zl259OoIhKEQMzTtaEqlt3hLjZBZjOhXSGaRdWb3YS5Tl1iQadLYnWzbyV1doDLw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" )
+                postDesigner.setAttribute(TendencyAttributes.username, "@mailubb" )
+                this.shadowRoot.appendChild(postDesigner)
+
             //Esto es la NAV
             const nav = this.ownerDocument.createElement("nav");
             nav.classList.add("navLeft")
@@ -43,13 +54,15 @@ class TendenciesScreen extends HTMLElement{
             this.shadowRoot.appendChild(nav);
 
             //for each data para ver si me renderiza
-            tendenciesData.forEach((postimg)=> {
-                const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
-                postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
-                postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
-                this.posts.push(postDesigner)
+            // tendenciesData.forEach((postimg)=> {
+            //     const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
+            //     postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
+            //     postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
+            //     this.posts.push(postDesigner)
 
-            })
+            // })
+
+            
 
         }
     }

@@ -1,7 +1,7 @@
 export const tendenciesData = [
     {
         username: '@JohnSmith',
-        post: 'https://ejemplo.com/imagen1.jpg'
+        post: 'https://s3-alpha-sig.figma.com/img/a717/261c/c0d0c90dc163ca7a878ac1e4dc5d0e10?Expires=1699833600&Signature=QjFcF0tKAHUcA5z9mm8~fwnuCftVdsI7UrWGE-yfPZoe6uAD8AtkzI8BqJjrX7Kmr7AMEH7lFld7BtrTVxkCWQpdP6DD1ku660lzYZ7CaPY5w9-137p5LuC398x3O7PqoTTgvxueemmjBxcv-QsLOMGeBxYjqX3gthW-1i0AsJzQAbP6tlFNmMGXOHj5fHWpNsM-QlGEEap~kBAhXaA2tOncYRwghMRfK7rN3VIv1mzBzcXwRDzeyeeMm6Y34svuyAZDurA1DLokjmRFf3SP~6Zl259OoIhKEQMzTtaEqlt3hLjZBZjOhXSGaRdWb3YS5Tl1iQadLYnWzbyV1doDLw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
     },
     {
         username: '@EmilyJohnson',
