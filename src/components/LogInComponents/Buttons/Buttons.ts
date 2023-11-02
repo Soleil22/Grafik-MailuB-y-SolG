@@ -1,3 +1,7 @@
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 import EditButtonsCss from "./Buttons.css"
 
 export enum ButtonAttributes {
@@ -35,8 +39,12 @@ class ButtonsLogin extends HTMLElement {
         this.attachShadow({mode: "open"})
     }
 
-    connectedCallback(){
+    async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector('button');
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.DASHBOARD))
+        })
     }
 
     render(){
@@ -51,6 +59,7 @@ class ButtonsLogin extends HTMLElement {
             <button class="button-signup">${this.textsignup}</button>
             </div>
             `
+
         }
     }
 }

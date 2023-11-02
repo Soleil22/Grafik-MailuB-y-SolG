@@ -4,7 +4,6 @@ import "./screens/LogIn/LogIn"
 import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
-import "./screens/Shop/Shop"
 import "./screens/Tendencies/tendencies"
 
 import { addObserver } from "./store/index";
