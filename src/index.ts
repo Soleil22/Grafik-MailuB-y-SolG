@@ -3,6 +3,8 @@ import "./screens/DashBoard/DashBoardIndex"
 import "./screens/LogIn/LogIn"
 import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
+import "./screens/PerfilPost/PerfilPost"
+import "./screens/Shop/Shop"
 
 class AppContainer extends HTMLElement {
     constructor(){
@@ -17,7 +19,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <perfil-container></perfil-container>
+            <main-container></main-container>
             `
         }
     }
@@ -32,4 +34,8 @@ customElements.define('app-container', AppContainer)
 
 //<perfil-container></perfil-container>
 
+//<perfil-post-container></perfil-post-container>
+
 //<sign-container></sign-container>
+
+//<shop-container></shop-container>

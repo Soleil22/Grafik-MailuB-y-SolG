@@ -1,24 +1,24 @@
-import EditNavLeft from "./navLeft.css"
+import EditNavShopComponentCss from "./NavShopComponent.css"
 
-export enum NavLeftAttributes {
+export enum NavLeftShopAttributes {
     "profileimg" = "profileimg",
     "username" = "username"
 }
 
-class NavLeft extends HTMLElement {
+class NavLeftShop extends HTMLElement {
         
     profileimg?: string
     username?: string
 
     static get observedAttributes(){
-        const attrs: Record<NavLeftAttributes,null> = {
+        const attrs: Record<NavLeftShopAttributes,null> = {
             profileimg: null, 
             username: null
         }
         return Object.keys(attrs)
     } 
 
-    attributeChangedCallback(propName:NavLeftAttributes,oldValue: string | undefined,newValue: string | undefined){
+    attributeChangedCallback(propName:NavLeftShopAttributes,oldValue: string | undefined,newValue: string | undefined){
         switch(propName){
             default: 
             this[propName] = newValue;
@@ -39,7 +39,7 @@ class NavLeft extends HTMLElement {
      render(){
         if (this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <style>${EditNavLeft}</style>
+            <style>${EditNavShopComponentCss}</style>
             <div class="navLeft">
                 <div class="imgProfile">
                     <img src="${this.profileimg}">
@@ -59,5 +59,5 @@ class NavLeft extends HTMLElement {
         }
      }
 }
-customElements.define("nav-left", NavLeft)
-export default NavLeft
+customElements.define("nav-left-shop", NavLeftShop)
+export default NavLeftShop

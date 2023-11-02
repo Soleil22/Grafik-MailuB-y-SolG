@@ -1,0 +1,62 @@
+.imgProfile img {
+    border-radius: 50%;
+    background-color: #601FEB;
+    border: 4px solid #FFF;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: relative;
+    margin-top: 1rem;
+}
+.imgProfile{
+    display: flex;
+    gap: 1rem;
+    margin-left: 3.5rem;
+    padding-top: 1rem;
+}
+
+.navLeft{
+    font-family: 'Poppins', sans-serif;
+}
+
+.imgProfile p{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 2.2rem;
+}
+
+.buttonContainer{
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    gap: 5vh;
+    padding-top: 1.7rem;
+    margin-top: 1rem;
+    margin-left: 5.8rem;
+}
+
+.buttonNav{
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: 500;
+    color: #FFF;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-right: 200vh;
+   
+    
+}
+
+.buttonUP{
+    background-color: #601FEB;
+    border-radius: 0.625rem;
+    border-color: transparent;
+    width: 6.5rem;
+    height: 1.8rem;
+    font-weight: 600;
+    color: #FFF;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-right: 200vh;
+
+}
