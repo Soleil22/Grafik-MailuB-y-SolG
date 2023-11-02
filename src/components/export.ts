@@ -17,3 +17,4 @@ export {default as TarjetUser} from "./PerfilUserComponents/TarjetUser/TarjetUse
 export {default as IconsNavUp} from "./PerfilUserComponents/IconsNavUp/IconsNavUp"
 export {default as ChangePassword} from "./PerfilUserComponents/ChangePassword/ChangePassword"
 export {default as NavLeftShop} from "./ShopComponents/NavShopComponents/NavShopComponents"
+export {default as Tendencies} from "./tendenciesPostsComponents/tendencyPost/tendencyPost"
