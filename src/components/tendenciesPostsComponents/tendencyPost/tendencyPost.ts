@@ -1,3 +1,5 @@
+import StylePost from "./tendencies.css"
+
 export enum TendencyAttributes {
     "post"="post",
     "username" = "username",
