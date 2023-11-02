@@ -6,6 +6,10 @@ import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
 import "./screens/Shop/Shop"
 
+import { addObserver } from "./store/index";
+import { appState } from "./store/index";
+import { Screens } from "./types/navigation";
+
 class AppContainer extends HTMLElement {
     constructor(){
         super();
@@ -17,11 +21,21 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        if(this.shadowRoot){
-            this.shadowRoot.innerHTML = `
-            <main-container></main-container>
-            `
-        }
+        if(this.shadowRoot) this.shadowRoot.innerHTML = ``
+        switch (appState.screen) {
+            case Screens.DASHBOARD:
+                const dashboard = this.ownerDocument.createElement("main-container");
+                this.shadowRoot?.appendChild(dashboard);
+                break;
+        
+            case Screens.LOGIN:
+                const login = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(login);
+                break;
+        
+            default:
+                break;
+            }
     }
 }
 
