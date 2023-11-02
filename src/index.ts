@@ -19,7 +19,7 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-            <shop-container></shop-container>
+            <main-container></main-container>
             `
         }
     }

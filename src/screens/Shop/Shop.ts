@@ -1,14 +1,8 @@
 import EditShopCss from "./Shop.css"
 import NavLeft, {NavLeftAttributes} from "../../components/dashBoardComponents/navLeft/navLeft"
-import { data } from "../../data/contactData"
-import { dataActivity } from "../../data/lastActivityData"
-import Contacts, {ContactAttributes} from "../../components/dashBoardComponents/contacts/contacts"
-import LastActivity, {ActivityAttributes} from "../../components/dashBoardComponents/lastActivityContacts/lastActivity"
 import EditMainCss from "../DashBoard/main.css"
 import EditShadowCss from "../DashBoard/shadowroot.css"
 import NavUp, {NavUpAttribute} from "../../components/dashBoardComponents/NavBarAbove/navBarUp";
-import Banner,{BannerAttribute} from "../../components/dashBoardComponents/Banner/banner";
-
 class Shop extends HTMLElement {
 
     constructor(){

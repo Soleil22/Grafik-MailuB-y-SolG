@@ -19,27 +19,11 @@ import EditBannerCss from "../../components/dashBoardComponents/Banner/Banner.cs
 class Container extends HTMLElement {
 
     categoriesmain: CategoriesMain[]=[]
-    contact: Contacts[] = []
-    activity: LastActivity[]= []
     cards: CardUser[]=[]
 
     constructor(){
         super()
         this.attachShadow({mode: "open"})
-
-        data.forEach((contactsview) => {
-            const newContact = this.ownerDocument.createElement("contact-info") as Contacts;
-            newContact.setAttribute(ContactAttributes.username, contactsview.username)
-            newContact.setAttribute(ContactAttributes.profileimage, contactsview.profileImage)
-            this.contact.push(newContact)
-        });
-
-        dataActivity.forEach((activitycontacts) => {
-            const newuserActivity = this.ownerDocument.createElement("last-activity") as LastActivity;
-            newuserActivity.setAttribute(ActivityAttributes.user, activitycontacts.user)
-            this.activity.push(newuserActivity)
-        });
-
         //data de los botones main
         ButtonData.forEach((maincategorie) => {
             const categories = this.ownerDocument.createElement("categories-main") as CategoriesMain;
@@ -196,25 +180,7 @@ class Container extends HTMLElement {
             //fin textos
 
             //contactos componente
-            const contactContainer = this.ownerDocument.createElement("section")
-            contactContainer.appendChild(textContact)
-            contactContainer.classList.add("contactContainer")
-            this.contact.forEach((contactsview)=>{
-                contactContainer.appendChild(contactsview)
-            })
-            nav.appendChild(contactContainer)
-
-            //last activity component
-            const activityContainer = this.ownerDocument.createElement("section")
-            activityContainer.appendChild(tittleActivity)
-            activityContainer.appendChild(textActivity)
-            activityContainer.classList.add("containerActivity")
-            this.activity.forEach((activitycontacts)=>{
-                activityContainer.appendChild(activitycontacts)
-            })
             
-            nav.appendChild(activityContainer)
-            activityContainer.appendChild(moreGrafik)
             this.shadowRoot.appendChild(nav);
 
             //footer//
