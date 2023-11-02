@@ -8,3 +8,10 @@
     flex-shrink: 0;
     
 }
+
+.heart{
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+}
