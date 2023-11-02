@@ -35,12 +35,12 @@ class AppContainer extends HTMLElement {
                 break;
 
             case Screens.SIGNUP:
-                const signup = this.ownerDocument.createElement("log-container");
+                const signup = this.ownerDocument.createElement("sign-container");
                 this.shadowRoot?.appendChild(signup);
                 break;
 
             case Screens.PERFILUSER:
-                const perfiluser = this.ownerDocument.createElement("log-container");
+                const perfiluser = this.ownerDocument.createElement("perfil-container");
                 this.shadowRoot?.appendChild(perfiluser);
                 break;
 
@@ -50,12 +50,12 @@ class AppContainer extends HTMLElement {
                 break; 
 
             case Screens.TENDENCIES:
-                const tendencies = this.ownerDocument.createElement("log-container");
+                const tendencies = this.ownerDocument.createElement("tendencies-container");
                 this.shadowRoot?.appendChild(tendencies);
                 break;
 
             case Screens.USERPOST:
-                const userpost = this.ownerDocument.createElement("log-container");
+                const userpost = this.ownerDocument.createElement("perfil-post-container");
                 this.shadowRoot?.appendChild(userpost);
                 break;
         
