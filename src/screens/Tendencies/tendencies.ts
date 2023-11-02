@@ -59,7 +59,6 @@ class TendenciesScreen extends HTMLElement{
             //     postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
             //     postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
             //     this.posts.push(postDesigner)
-
             // })
 
             
