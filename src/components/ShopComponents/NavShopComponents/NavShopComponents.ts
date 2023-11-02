@@ -5,7 +5,7 @@ export enum NavLeftShopAttributes {
     "username" = "username"
 }
 
-class NavLeft extends HTMLElement {
+class NavLeftShop extends HTMLElement {
         
     profileimg?: string
     username?: string
@@ -59,5 +59,5 @@ class NavLeft extends HTMLElement {
         }
      }
 }
-customElements.define("nav-left", NavLeft)
-export default NavLeft
+customElements.define("nav-left-shop", NavLeftShop)
+export default NavLeftShop
