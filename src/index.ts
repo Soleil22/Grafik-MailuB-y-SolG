@@ -6,6 +6,10 @@ import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
 import "./screens/Tendencies/tendencies"
 
+import { addObserver } from "./store/index";
+import { appState } from "./store/index";
+import { Screens } from "./types/navigation";
+
 class AppContainer extends HTMLElement {
     constructor(){
         super();
@@ -17,11 +21,46 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        if(this.shadowRoot){
-            this.shadowRoot.innerHTML = `
-            <tendencies-container></tendencies-container>
-            `
-        }
+        if(this.shadowRoot) this.shadowRoot.innerHTML = ``
+        switch (appState.screen) {
+            case Screens.DASHBOARD:
+                const dashboard = this.ownerDocument.createElement("main-container");
+                this.shadowRoot?.appendChild(dashboard);
+                break;
+        
+            case Screens.LOGIN:
+                const login = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(login);
+                break;
+
+            case Screens.SIGNUP:
+                const signup = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(signup);
+                break;
+
+            case Screens.PERFILUSER:
+                const perfiluser = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(perfiluser);
+                break;
+
+            case Screens.PUBLICATIONS:
+                const publications = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(publications);
+                break; 
+
+            case Screens.SHOP:
+                const shop = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(shop);
+                break;
+
+            case Screens.USERPOST:
+                const userpost = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(userpost);
+                break;
+        
+            default:
+                break;
+            }
     }
 }
 
