@@ -1,6 +1,6 @@
 import EditShopCss from "./Shop.css"
 import NavUp, {NavUpAttribute} from "../../components/PerfilUserComponents/IconsNavUp/IconsNavUp";
-import NavLeft, {NavLeftAttributes} from "../../components/dashBoardComponents/navLeft/navLeft"
+import NavLeftShop, {NavLeftShopAttributes} from "../../components/ShopComponents/NavShopComponents/NavShopComponents";
 import { data } from "../../data/contactData"
 import { dataActivity } from "../../data/lastActivityData"
 import Contacts, {ContactAttributes} from "../../components/dashBoardComponents/contacts/contacts"
@@ -51,9 +51,9 @@ class Shop extends HTMLElement {
             this.shadowRoot.appendChild(NavUpDadContainer)
 
             //Esto es la NAV
-            const navLeftContainer = this.ownerDocument.createElement("nav-left") as NavLeft
-            navLeftContainer.setAttribute(NavLeftAttributes.username, "Anna!")
-            navLeftContainer.setAttribute(NavLeftAttributes.profileimg, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1696204800&Signature=B8hSlQTrManrBxpvxZi-x8CG3YTpn1rgpTiNS0Nvu3HQawGz29BvWbz4bANND-Dndc8HcWLoxKPKEh5nofkYemmcJ4c-JH28JpPMcnNkol732tVlh-eE2om1iZJKJjdVtoAg4fA5qIbJBkaOsOFcqXM~UL2dDUVK--RQVjEvywe0oXZNntG6UVz1gSoSb25RgkqWEustu6QVZ722GyEeeC4TQEavJXLLTwl0sx2agxYeqciMtc13myVVyGQevR-eDaEwQOJTstljUb9xcDqlrHNbzUKApF4Dbb~WgUNaIqerBWL7ObZW9z0v4xMG3ej9lwtaNGrN~iJYhHifHPD-Gg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            const navLeftContainer = this.ownerDocument.createElement("nav-left") as NavLeftShop
+            navLeftContainer.setAttribute(NavLeftShopAttributes.username, "Anna!")
+            navLeftContainer.setAttribute(NavLeftShopAttributes.profileimg, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1696204800&Signature=B8hSlQTrManrBxpvxZi-x8CG3YTpn1rgpTiNS0Nvu3HQawGz29BvWbz4bANND-Dndc8HcWLoxKPKEh5nofkYemmcJ4c-JH28JpPMcnNkol732tVlh-eE2om1iZJKJjdVtoAg4fA5qIbJBkaOsOFcqXM~UL2dDUVK--RQVjEvywe0oXZNntG6UVz1gSoSb25RgkqWEustu6QVZ722GyEeeC4TQEavJXLLTwl0sx2agxYeqciMtc13myVVyGQevR-eDaEwQOJTstljUb9xcDqlrHNbzUKApF4Dbb~WgUNaIqerBWL7ObZW9z0v4xMG3ej9lwtaNGrN~iJYhHifHPD-Gg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
             this.shadowRoot.appendChild(navLeftContainer)
         }
     }
