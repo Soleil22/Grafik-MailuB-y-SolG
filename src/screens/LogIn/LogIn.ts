@@ -5,11 +5,16 @@ import InputText, {InputTextAttributes} from "../../components/LogInComponents/I
 import ButtonsLogin, {ButtonAttributes} from "../../components/LogInComponents/Buttons/Buttons"
 import DecorationBackground, {DecorationAttributes}  from "../../components/LogInComponents/DecorationBackground/DecorationBackground"
 
+import { addObserver, appState, dispatch } from "../../store";
+import { navigate } from "../../store/actions";
+import { Screens } from "../../types/navigation";
+
 class LogInContainer extends HTMLElement {
 
     constructor(){
         super()
         this.attachShadow({mode: "open"})
+        addObserver(this);
     }
 
     connectedCallback(){

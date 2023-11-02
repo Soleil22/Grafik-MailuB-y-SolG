@@ -14,6 +14,7 @@ class AppContainer extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: "open"})
+        addObserver(this);
     }
 
     connectedCallback() {
@@ -23,14 +24,14 @@ class AppContainer extends HTMLElement {
     render() {
         if(this.shadowRoot) this.shadowRoot.innerHTML = ``
         switch (appState.screen) {
-            case Screens.DASHBOARD:
-                const dashboard = this.ownerDocument.createElement("main-container");
-                this.shadowRoot?.appendChild(dashboard);
-                break;
-        
             case Screens.LOGIN:
                 const login = this.ownerDocument.createElement("log-container");
                 this.shadowRoot?.appendChild(login);
+                break;
+
+            case Screens.DASHBOARD:
+                const dashboard = this.ownerDocument.createElement("main-container");
+                this.shadowRoot?.appendChild(dashboard);
                 break;
 
             case Screens.SIGNUP:
