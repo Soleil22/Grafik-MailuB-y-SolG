@@ -5,6 +5,7 @@ import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
 import "./screens/Shop/Shop"
+import "./screens/Tendencies/tendencies"
 
 import { addObserver } from "./store/index";
 import { appState } from "./store/index";
@@ -78,3 +79,5 @@ customElements.define('app-container', AppContainer)
 //<sign-container></sign-container>
 
 //<shop-container></shop-container>
+
+//<tendencies-container></tendencies-container>
