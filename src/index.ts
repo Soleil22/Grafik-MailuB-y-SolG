@@ -49,9 +49,9 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot?.appendChild(publications);
                 break; 
 
-            case Screens.SHOP:
-                const shop = this.ownerDocument.createElement("log-container");
-                this.shadowRoot?.appendChild(shop);
+            case Screens.TENDENCIES:
+                const tendencies = this.ownerDocument.createElement("log-container");
+                this.shadowRoot?.appendChild(tendencies);
                 break;
 
             case Screens.USERPOST:
