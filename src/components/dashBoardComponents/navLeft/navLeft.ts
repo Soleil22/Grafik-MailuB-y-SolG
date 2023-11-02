@@ -6,9 +6,7 @@ export enum NavLeftAttributes {
 }
 
 class NavLeft extends HTMLElement {
-    //contact: Contacts[] = []
-    //activity: LastActivity[]= []
-    
+        
     profileimg?: string
     username?: string
 
@@ -58,34 +56,6 @@ class NavLeft extends HTMLElement {
                 </div>
             </div>
             `
-                       
-            /*data.forEach((contactsview) => {
-                console.log(contactsview);
-                const newContact = this.ownerDocument.createElement("contact-info") as Contacts;
-                newContact.setAttribute(ContactAttributes.username, contactsview.username)
-                newContact.setAttribute(ContactAttributes.profileimage, contactsview.profileImage)
-                this.contact.push(newContact)
-            });
-    
-            dataActivity.forEach((activitycontacts) => {
-                const newuserActivity = this.ownerDocument.createElement("last-activity") as LastActivity;
-                newuserActivity.setAttribute(ActivityAttributes.user, activitycontacts.user)
-                this.activity.push(newuserActivity)
-            });
-            
-            const contactContainer = this.ownerDocument.createElement("section")
-            contactContainer.classList.add("contactContainer")
-            this.contact.forEach((contactsview)=>{
-                contactContainer.appendChild(contactsview)
-            })
-            this.shadowRoot.appendChild(contactContainer)
-
-            const activityContainer = this.ownerDocument.createElement("section")
-            activityContainer.classList.add("containerActivity")
-            this.activity.forEach((activitycontacts)=>{
-                activityContainer.appendChild(activitycontacts)
-            })
-            this.shadowRoot.appendChild(activityContainer)*/
         }
      }
 }
