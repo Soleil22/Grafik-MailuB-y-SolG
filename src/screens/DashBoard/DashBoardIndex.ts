@@ -129,7 +129,7 @@ class Container extends HTMLElement {
             //texto sección comentarios
                 const textComent = this.ownerDocument.createElement("h1")
                 textComent.classList.add("titulo-seccion-comentarios")
-                textComent.textContent = "Watch the projects of your contacts!"
+                textComent.textContent = "Want to show off? Share your project!"
                 dashboard.appendChild(textComent)
 
             //post
