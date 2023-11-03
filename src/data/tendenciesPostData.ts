@@ -17,7 +17,7 @@ export const tendenciesData = [
     },
     {
         username: '@WilliamWilson',
-        post: 'https://ejemplo.com/imagen5.jpghttps://s3-alpha-sig.figma.com/img/83a0/95cc/e101af00a8bc847a6c0f1f2fa0090274?Expires=1699833600&Signature=X5jPZlgV-5SYabIoWOGIenqWmT53n4sB7GfdpCKg2YrfCcfQNvmvkapt6apTIL~2Sxp-~z7NMrdR9nW6tIIZ2OHeZOdqpmIFIYRqgmp0TvsteYV7m8l0Z4tBnHBe4D6dSqGcPGA7L6WPzZVB1kSUL0xPymev6RyL9Onu5bgavubluHa5tg1pUgE-P755GYHntfm24jw0YZCk5MOnFpXqRLzlc4Fu9L0y1e81CDpe2HSMovWaESkEKT0w0BJkJeNM8B~r-CC3IMPhe4Wrsqeavp1EmLouAmibyAfS6PlbM8gU1ot0lctCHr7-iSqI2EuXVbqU~A9Zk5vqwR8-8RIAYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+        post: 'https://s3-alpha-sig.figma.com/img/83a0/95cc/e101af00a8bc847a6c0f1f2fa0090274?Expires=1699833600&Signature=X5jPZlgV-5SYabIoWOGIenqWmT53n4sB7GfdpCKg2YrfCcfQNvmvkapt6apTIL~2Sxp-~z7NMrdR9nW6tIIZ2OHeZOdqpmIFIYRqgmp0TvsteYV7m8l0Z4tBnHBe4D6dSqGcPGA7L6WPzZVB1kSUL0xPymev6RyL9Onu5bgavubluHa5tg1pUgE-P755GYHntfm24jw0YZCk5MOnFpXqRLzlc4Fu9L0y1e81CDpe2HSMovWaESkEKT0w0BJkJeNM8B~r-CC3IMPhe4Wrsqeavp1EmLouAmibyAfS6PlbM8gU1ot0lctCHr7-iSqI2EuXVbqU~A9Zk5vqwR8-8RIAYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
     },
     {
         username: '@OliviaMartinez',

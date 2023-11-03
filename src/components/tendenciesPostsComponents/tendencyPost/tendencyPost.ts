@@ -53,7 +53,7 @@ class Tendencies extends HTMLElement {
             <div class="post-container">
                 <img src="${this.post}" alt="post de un diseñador en tendencia" class="post-image">
                 <div class="user-like-container">
-                    <p>${this.username}</p>
+                    <p class="username-class">${this.username}</p>
                     <img src="${this.likebutton}" alt="boton de like" class="heart">
                 </div>
             </div>
