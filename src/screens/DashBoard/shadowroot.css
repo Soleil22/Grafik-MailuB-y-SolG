@@ -126,5 +126,12 @@ body{
         width: 60rem;
     }
 
+    .contenedor-post-papa{
+        display: grid;
+        grid-template-columns: 340px 340px 340px;
+        position: absolute;
+        margin-left: 29rem;
+        margin-top: 5rem;
+    }
     
     

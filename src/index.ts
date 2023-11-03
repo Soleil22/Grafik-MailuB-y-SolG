@@ -59,11 +59,11 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot?.appendChild(userpost);
                 break;
         
-            default:
-                break;
+        //     default:
+        //         break;
             }
     }
-}
+
 
 
 customElements.define('app-container', AppContainer)

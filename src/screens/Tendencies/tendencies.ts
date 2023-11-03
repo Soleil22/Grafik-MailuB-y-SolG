@@ -5,15 +5,17 @@ import Tendencies,{TendencyAttributes} from "../../components/tendenciesPostsCom
 import { tendenciesData } from "../../data/tendenciesPostData";
 import EditMainCss from "../DashBoard/main.css"
 import EditShadowCss from "../DashBoard/shadowroot.css"
+import Footer,{FooterAttributes} from "../../components/dashBoardComponents/footer/footer";
+
 
 class TendenciesScreen extends HTMLElement{
 
-    // posts: Tendencies[]=[]
+    posts: Tendencies[]=[]
 
     constructor(){
         super()
         this.attachShadow({mode: "open"})
-        
+        //data de los post de tendencias
 
     }
 
@@ -38,11 +40,22 @@ class TendenciesScreen extends HTMLElement{
             dashboard.appendChild(NavUpDadContainer)
             this.shadowRoot.appendChild(dashboard);
 
-            //posts en tendencia
+//for each data para ver si me renderiza
+
+            tendenciesData.forEach((postimg)=> {
             const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
-                postDesigner.setAttribute(TendencyAttributes.post, "https://s3-alpha-sig.figma.com/img/a717/261c/c0d0c90dc163ca7a878ac1e4dc5d0e10?Expires=1699833600&Signature=QjFcF0tKAHUcA5z9mm8~fwnuCftVdsI7UrWGE-yfPZoe6uAD8AtkzI8BqJjrX7Kmr7AMEH7lFld7BtrTVxkCWQpdP6DD1ku660lzYZ7CaPY5w9-137p5LuC398x3O7PqoTTgvxueemmjBxcv-QsLOMGeBxYjqX3gthW-1i0AsJzQAbP6tlFNmMGXOHj5fHWpNsM-QlGEEap~kBAhXaA2tOncYRwghMRfK7rN3VIv1mzBzcXwRDzeyeeMm6Y34svuyAZDurA1DLokjmRFf3SP~6Zl259OoIhKEQMzTtaEqlt3hLjZBZjOhXSGaRdWb3YS5Tl1iQadLYnWzbyV1doDLw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" )
-                postDesigner.setAttribute(TendencyAttributes.username, "@mailubb" )
-                this.shadowRoot.appendChild(postDesigner)
+                postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
+                postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
+                this.posts.push(postDesigner)
+            })
+
+            const PostDadContainer = this.ownerDocument.createElement("section")
+            PostDadContainer.classList.add("contenedor-post-papa")
+            this.posts.forEach((postimg) => {
+                PostDadContainer.appendChild(postimg)
+            })
+            console.log(tendenciesData)
+            this.shadowRoot.appendChild(PostDadContainer)
 
             //Esto es la NAV
             const nav = this.ownerDocument.createElement("nav");
@@ -53,16 +66,16 @@ class TendenciesScreen extends HTMLElement{
             this.shadowRoot.appendChild(navLeftContainer)
             this.shadowRoot.appendChild(nav);
 
-            //for each data para ver si me renderiza
-            // tendenciesData.forEach((postimg)=> {
-            //     const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
-            //     postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
-            //     postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
-            //     this.posts.push(postDesigner)
-            // })
+            const footerContainer = this.ownerDocument.createElement("footer-main") as Footer
+            footerContainer.setAttribute(FooterAttributes.logo, "Grafik.com")
+            footerContainer.setAttribute(FooterAttributes.options1, "Market place")
+            footerContainer.setAttribute(FooterAttributes.options2, "Customer care")
+            footerContainer.setAttribute(FooterAttributes.options3, "Verify subcription")
+            footerContainer.setAttribute(FooterAttributes.options4, "Contact us")
+            footerContainer.setAttribute(FooterAttributes.options5, "About Grafik")
+            this.shadowRoot.appendChild(footerContainer)
 
             
-
         }
     }
 }
