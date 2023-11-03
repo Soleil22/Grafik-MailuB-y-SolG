@@ -6,6 +6,7 @@ import { tendenciesData } from "../../data/tendenciesPostData";
 import EditMainCss from "../DashBoard/main.css"
 import EditShadowCss from "../DashBoard/shadowroot.css"
 import Footer,{FooterAttributes} from "../../components/dashBoardComponents/footer/footer";
+import firebase from "../../utils/firebase";
 
 
 class TendenciesScreen extends HTMLElement{
@@ -23,7 +24,12 @@ class TendenciesScreen extends HTMLElement{
         this.render()
     }
 
-    render(){
+    async render(){
+        const posts = await firebase.getPost()
+        posts.forEach((post:any) => {
+            const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
+            this.shadowRoot?.appendChild(postDesigner)
+        })
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
             <style>${EditMainCss}</style>
@@ -42,7 +48,7 @@ class TendenciesScreen extends HTMLElement{
 
 //for each data para ver si me renderiza
 
-            tendenciesData.forEach((postimg)=> {
+           /* tendenciesData.forEach((postimg)=> {
             const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
                 postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
                 postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
@@ -55,7 +61,7 @@ class TendenciesScreen extends HTMLElement{
                 PostDadContainer.appendChild(postimg)
             })
             console.log(tendenciesData)
-            this.shadowRoot.appendChild(PostDadContainer)
+            this.shadowRoot.appendChild(PostDadContainer)*/
 
             //Esto es la NAV
             const nav = this.ownerDocument.createElement("nav");

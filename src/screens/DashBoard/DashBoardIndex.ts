@@ -15,6 +15,7 @@ import Footer,{FooterAttributes} from "../../components/dashBoardComponents/foot
 import EditMainCss from "./main.css"
 import EditShadowCss from "./shadowroot.css"
 import EditBannerCss from "../../components/dashBoardComponents/Banner/Banner.css"
+import DescriptionPost, {DescriptionAttribute}from "../../components/dashBoardComponents/DescriptionPost/DescriptionPost"
 
 class Container extends HTMLElement {
 
@@ -129,7 +130,7 @@ class Container extends HTMLElement {
             //texto sección comentarios
                 const textComent = this.ownerDocument.createElement("h1")
                 textComent.classList.add("titulo-seccion-comentarios")
-                textComent.textContent = "Watch the projects of your contacts!"
+                textComent.textContent = "Want to show off? Share your project!"
                 dashboard.appendChild(textComent)
 
             //post
@@ -141,11 +142,11 @@ class Container extends HTMLElement {
                 comentarioMain.setAttribute(ProjectAttribute.send, "https://static.thenounproject.com/png/1015120-200.png")
                 dashboard.appendChild(comentarioMain)
 
-            //texto para el usuario
-                // //const titlecomment = this.ownerDocument.createElement("h1")
-                // titlecomment.classList.add("titulo-comentario")
-                // titlecomment.textContent = "Write your comment instantly!"
-                // dashboard.appendChild(titlecomment)//
+            //add post
+                const inputUpload = this.ownerDocument.createElement("description-post") as DescriptionPost
+                inputUpload.classList.add("description")
+                inputUpload.setAttribute(DescriptionAttribute.user, "M")
+                this.shadowRoot.appendChild(inputUpload)
 
             //comentario de los contactos
               const viewcoments = this.ownerDocument.createElement("coment-main")

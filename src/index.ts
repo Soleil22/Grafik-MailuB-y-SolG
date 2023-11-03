@@ -22,7 +22,8 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        if(this.shadowRoot) this.shadowRoot.innerHTML = ``
+        if(this.shadowRoot) this.shadowRoot.innerHTML = `
+        `
         switch (appState.screen) {
             case Screens.LOGIN:
                 const login = this.ownerDocument.createElement("log-container");
@@ -64,9 +65,6 @@ class AppContainer extends HTMLElement {
             }
     }
 }
-
-
-
 customElements.define('app-container', AppContainer)
 
 //<main-container></main-container>

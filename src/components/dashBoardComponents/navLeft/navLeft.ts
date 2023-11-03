@@ -43,6 +43,14 @@ class NavLeft extends HTMLElement {
         button?.addEventListener(('click'), () =>{
           dispatch(navigate(Screens.USERPOST))
         })
+        const buttonT = this.shadowRoot?.querySelector(".buttonTend");
+        buttonT?.addEventListener(('click'), () =>{
+        dispatch(navigate(Screens.TENDENCIES))
+        })
+        const buttonH = this.shadowRoot?.querySelector(".buttonHome");
+        buttonH?.addEventListener(('click'), () =>{
+        dispatch(navigate(Screens.DASHBOARD))
+        })
      }
 
      render(){
@@ -52,16 +60,11 @@ class NavLeft extends HTMLElement {
             <div class="navLeft">
                 <div class="imgProfile">
                     <img class="imagen" src="${this.profileimg}">
-                    <p>Hi, ${this.username}</p>
+                    <p class="text">Hi, ${this.username}</p>
                 </div>
                 <div class="buttonContainer">
-                    <button class="buttonUP">UPLOAD</button>
-                    <button class="buttonNav">Home</button>
-                    <button class="buttonNav">Discussion</button>
-                    <button class="buttonNav">Following</button>
-                    <button class="buttonNav">Tendencies</button>
-                    <button class="buttonNav">Shop</button>
-                    <button class="buttonNav">Files</button>
+                    <button class="buttonHome">Home</button>
+                    <button class="buttonTend">Tendencies</button>
                 </div>
             </div>
             `

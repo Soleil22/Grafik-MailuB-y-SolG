@@ -47,29 +47,5 @@ export const tendenciesData = [
         username: '@EmmaJohnson',
         post: 'https://s3-alpha-sig.figma.com/img/e778/bb88/1db25e7fd9d01a4bf325d85fe58c32fc?Expires=1699833600&Signature=K5HDC8~fPYbZZjtI1FGtAm5jA-D54iUeHoX~YrOrVaCrbp8Pzqk~efd7xDBIPBRcQeFYeVzDwSBJaGiT3y02S1QkmPcKF2XBbgonuJLALQ2dU~sEG4~YkB~qbBJbdY7pkybfGAkdZFcLtoc~a7kBmIhkxBCy6yWqGyHt6Ro6GHcBuquRX9VpOGlJ9E4BwyrdY~hdD2q~nkpWOEdpQhl6jjxtj85kFCiQexsixb0dlJqszK4l4pEY9kIB9Fep3saBP3P70dS0yg9JiviLwZY5FxAhDgbQxJdCpnv-OqUbVpo4EE6B2cUUMVxcO3laGbw5Fnun2N4GeiyJ-HiNksUcPg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
     },
-    {
-        username: '@MatthewMoore',
-        post: 'https://s3-alpha-sig.figma.com/img/a736/f34d/660e6c49e20ddbbbfeea51e581c5c6d0?Expires=1699833600&Signature=SDkT5IVNIqGifSGdK3aDBAgG13i09RsrBBLwti1HWivK7GOhOwpxGwNBKLFHIqeta8XeCl7TFbyx4M5qOLnVhmrX429SwLmrIaA2WQrr-KM7CX8jqO8SMtthVhcuxhe5GGwg0Al3lduZp9jy2-Y7drMmlGp~kIMlk~7kn1dlCHtBv5Mfi7Ph4DaQM88mXiOj6exe3CwOyC-Uzw7UwnnWRJO9lN8KDONwHetl97KPLHzQj0-DNC9dSZ0IiDRrkdCvedM4PsQrxYG6-MBBlrn-N7FWXAv2tOb4m6033zctlrsjoPdpXB-hCxHmQlqv7tspN8r4qYekn5kxkJlEY8p7Mw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-    },
-    {
-        username: '@AvaWhite',
-        post: 'https://s3-alpha-sig.figma.com/img/30fa/3bdb/72b1c904e6e0975dc1cfac573130ed12?Expires=1699833600&Signature=EsMy37BR~7Ja3A0-QjJiCVA0vDc538EU2ZE8zFyfEAfInE8Ko~WH0h5xs9ey76QZwXmv8rKloNL9AgagIznBkh0j0mLNUjTxFCOcHDeLXHZjuRu~AfuYWjof4bwZmicIdReQId1yBI9J58f9aK9SnBztq3sj3KNGw42gclAJk~F7~V0Ie-DWDtkGhaN5ODJYeQfODrXjyGQfhPap4ENPw1ENnU8Bb~jf0AKXIa5Csl6wd5LD0OJQOu6hE5eYKOR2Ieg1O-EUUKOcnfgjo6Nz5hQF1Dsgm2dUv7CkFwzPVM0T1PkVoFXlcZzyFuDReMrEHjMClun~f~DtBDZD0gYUCA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-    },
-    {
-        username: '@WilliamThomas',
-        post: 'https://s3-alpha-sig.figma.com/img/b85f/a59a/fb3968651ac483667aae5fec891f94fe?Expires=1699833600&Signature=oxCtlY7HUPjepb9-Sup16l38BOoBAWT~E~H00dssoiFwA-kqaObKSLCTOxCvlrG1ssj5L~BCdYMWL7TdRIYvTorOOp3vWgXZW4wV5clYy4JaGiJjfzzvnAMavIaYeZwItVqkwyg52QHXJVeAcJhRa5bdG-mwH~Tr858b26n~RxewEgQCn3L0hnCVRgbv-8RSP15nEbN-0MyLu6jYPdZXfXClf14i2LYnFqSZvEtxkt5SLhPNHID~zoT655fiLbaZgHCPnS5HB7WCtksX13AduMgy~27UciRncFjIpoSuKCi6JqX1qqZkgfc-qS0NwMoRvbGTYj6K1pklBn-kdX9weQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-    },
-    {
-        username: '@IsabellaWalker',
-        post: 'https://s3-alpha-sig.figma.com/img/c29b/8cdb/909a8de0fe505c5742ea80b7344dc52a?Expires=1699833600&Signature=NehhzRw6a32yZd6HIljKO2618u8mxWi51we0crW4gc5gg8lrt-40St2P0zE5tuRm8xNQ-f7RDXWSoZPX4A96-i1idbYjD4o1nN-wmv0rc4EXh7NzGBuLgBS3AQAmnoteMxqut4gNyHa3DeLdSu3ceiWCy1XzskKovRMRmY~BHlg2CUPK6b88CxTLzUAtUVuXvEawJpVAdE6oCwqV3uBMl-a8dcUTromVcTog80oQ~yLp4uqSdVhhCa-bFm-KyiaKu7CPsPQfJ4uvqGIhO-4TNH4Df9c9SvfkrP8rBcSqIo6Pu26zz-14qd49lGVMYUAjXCUV6M5WrUcSZIrh3QtGNQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-    },
-    {
-        username: '@JamesDavis',
-        post: 'https://s3-alpha-sig.figma.com/img/7f95/4c83/8ac44f28bf8995805a50835351dddcb3?Expires=1699833600&Signature=IdYgLYKDP-GZPO2W6mwXZlrfaz78983oibMdGSm4XKvkjn4TGM9BwcA3Ic5EiDWtinqX4U6WwOqfFmbXvIS8A1eeL7xECslajmGwED40ZW6g66sytwN4iuVRv4BA9aHijBh7shr5w0QAqyDcfLlXO48QIayutT76XX29qB52s-21bFxyyLA5Yy0Al84gO8mmdvyR3LEt3kmgGI8qa03OHymwPNvdGaQ5MA2D3ivQTHieEXwk3q6YM8WsjqcpyIoNN1Eb4xCQP7ZDuad4snvpZyoNikQUBTUxahhAJkWQt7Y2MURZHifROVZEnptY86Nwz9o0Zc7y3se6ooTsNur11w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-    },
-    {
-        username: '@SophiaGarcia',
-        post: 'https://s3-alpha-sig.figma.com/img/39af/5033/41d7bf3f3fab0d2aa7c6601063a2e522?Expires=1699833600&Signature=inFARXl~EsDm32U7WG~3wjhFJ5W9FJziRvM7LLVxqo4xUSo70868dyGmDW090f8dQE87rTB5v5HEtgoalO0KhuhjtbLvFMY5M0mY5fEoiwn2JvQPds0KwmE4vjMcGGYjWcpUy-hK1xdUIt6Xth5H~~d7ShGmTDRkGBkrzjJahOwuBiAYlNKKkfe1WyDWdN60-1ea4WP4I6JFsxgGBKWmEmeoqP9AFqnJrK2VAs6aIB87bPFvv978mq~DsjKcEhMgaaWAYHvHsAaKn8cebN2UUEuqAemo6GZXsNMWhVz1HKomEsuNVQUksUDni0BwJHRBCAfBhzMjeMD2baJzTS4TZQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-    }
 ];
 
