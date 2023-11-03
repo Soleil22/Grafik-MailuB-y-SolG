@@ -40,6 +40,16 @@ const getPost = async() => {
   return transformed
 }
 
+export const addPost = async (post: any) => {
+  try{
+      const where = collection(db, "UploadFilesUser")
+      await addDoc(where, post)
+  } catch (error) {
+      console.error(error)
+  }
+}
+
 export default {
-  getPost
+  getPost,
+  addPost
 }
