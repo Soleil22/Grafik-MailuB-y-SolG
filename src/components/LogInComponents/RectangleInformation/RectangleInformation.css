@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.rectangle-container{
+    border-radius: 2.1875rem;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #D9D9D9 93.73%);
+    width: 26rem;
+    height: 45.7rem;
+}
+.grafik-text{
+    font-family: 'Sora', sans-serif;
+    color: #000;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.logo-grafik{
+    width: 3rem;
+    height: 3rem;
+    padding-top: 5rem;
+}
+.text-welcome-join{
+    font-family: 'Poppins', sans-serif;
+    color: var(--Purple, #601FEB);
+    font-size: 1.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0.8rem;
+    padding-bottom: 0.4rem;
+}
+.social-media-buttons1{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.social-media-buttons2{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.social-media-buttons3{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.small-text{
+    font-family: 'Poppins', sans-serif;
+    color: rgba(46, 46, 46, 0.77);
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.container-button{
+    display: flex;
+    justify-content: center;
+    gap: 4.5rem;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

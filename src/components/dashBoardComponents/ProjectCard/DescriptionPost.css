@@ -1,0 +1,89 @@
+.container{
+    position: absolute;
+    margin-left: 27rem;
+    margin-top: 3rem;
+}
+.container p{
+    color: #000;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 5.4rem;
+}
+
+.container h4{
+    color: #601FEB;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cajita{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: linear-gradient(0deg, #C4C4C4 0%, #C4C4C4 100%), #FBFFEA;    ;
+    border-radius: 50%;
+    border: 2px solid #601FEB;
+    height: 3.07669rem;
+    margin-top: -0.1rem;
+    margin-top: 0.5rem;
+    width: 3rem;
+}
+
+.input{
+    width: 24.625rem;
+    height: 18.04275rem;
+    flex-shrink: 0;
+    border-radius: 0.8125rem;
+    border: 2px solid #601FEB;
+    background: #FFF;
+    color: #BABABA;
+    font-family: Poppins;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+
+.user-input{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.input-link{
+    width: 20rem;
+    height: 2.7rem;
+    border-radius: 5.8125rem;
+    background: #d3d3d3;
+    border: none;
+    padding-left: 7rem;
+    position: absolute;    
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.buttonUpload{
+    width: 21.4375rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: #601FEB;
+    border: none;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.09375rem;
+    margin-left: 8rem;
+}

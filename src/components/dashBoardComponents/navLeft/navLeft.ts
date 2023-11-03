@@ -1,14 +1,16 @@
 import EditNavLeft from "./navLeft.css"
 
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 export enum NavLeftAttributes {
     "profileimg" = "profileimg",
     "username" = "username"
 }
 
 class NavLeft extends HTMLElement {
-    //contact: Contacts[] = []
-    //activity: LastActivity[]= []
-    
+        
     profileimg?: string
     username?: string
 
@@ -32,10 +34,23 @@ class NavLeft extends HTMLElement {
      constructor(){
         super()
         this.attachShadow({mode:"open"})
+        addObserver(this);
      }
 
-     connectedCallback(){
+     async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector(".imagen");
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.USERPOST))
+        })
+        const buttonT = this.shadowRoot?.querySelector(".buttonTend");
+        buttonT?.addEventListener(('click'), () =>{
+        dispatch(navigate(Screens.TENDENCIES))
+        })
+        const buttonH = this.shadowRoot?.querySelector(".buttonHome");
+        buttonH?.addEventListener(('click'), () =>{
+        dispatch(navigate(Screens.DASHBOARD))
+        })
      }
 
      render(){
@@ -44,48 +59,15 @@ class NavLeft extends HTMLElement {
             <style>${EditNavLeft}</style>
             <div class="navLeft">
                 <div class="imgProfile">
-                    <img src="${this.profileimg}">
-                    <p>Hi, ${this.username}</p>
+                    <img class="imagen" src="${this.profileimg}">
+                    <p class="text">Hi, ${this.username}</p>
                 </div>
                 <div class="buttonContainer">
-                    <button class="buttonUP">UPLOAD</button>
-                    <button class="buttonNav">Home</button>
-                    <button class="buttonNav">Discussion</button>
-                    <button class="buttonNav">Following</button>
-                    <button class="buttonNav">Tendencies</button>
-                    <button class="buttonNav">Shop</button>
-                    <button class="buttonNav">Files</button>
+                    <button class="buttonHome">Home</button>
+                    <button class="buttonTend">Tendencies</button>
                 </div>
             </div>
             `
-                       
-            /*data.forEach((contactsview) => {
-                console.log(contactsview);
-                const newContact = this.ownerDocument.createElement("contact-info") as Contacts;
-                newContact.setAttribute(ContactAttributes.username, contactsview.username)
-                newContact.setAttribute(ContactAttributes.profileimage, contactsview.profileImage)
-                this.contact.push(newContact)
-            });
-    
-            dataActivity.forEach((activitycontacts) => {
-                const newuserActivity = this.ownerDocument.createElement("last-activity") as LastActivity;
-                newuserActivity.setAttribute(ActivityAttributes.user, activitycontacts.user)
-                this.activity.push(newuserActivity)
-            });
-            
-            const contactContainer = this.ownerDocument.createElement("section")
-            contactContainer.classList.add("contactContainer")
-            this.contact.forEach((contactsview)=>{
-                contactContainer.appendChild(contactsview)
-            })
-            this.shadowRoot.appendChild(contactContainer)
-
-            const activityContainer = this.ownerDocument.createElement("section")
-            activityContainer.classList.add("containerActivity")
-            this.activity.forEach((activitycontacts)=>{
-                activityContainer.appendChild(activitycontacts)
-            })
-            this.shadowRoot.appendChild(activityContainer)*/
         }
      }
 }

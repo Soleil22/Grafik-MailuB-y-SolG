@@ -110,8 +110,8 @@ body{
 
     .titulo-seccion-comentarios{
         margin-top: 85rem;
-        width: 40rem;
-        padding-left: 48rem;
+        width: 55rem;
+        padding-left: 32rem;
         text-align: end;
         position: absolute;
         font-size: 2.5rem;
@@ -126,5 +126,12 @@ body{
         width: 60rem;
     }
 
+    .contenedor-post-papa{
+        display: grid;
+        grid-template-columns: 340px 340px 340px;
+        position: absolute;
+        margin-left: 29rem;
+        margin-top: 5rem;
+    }
     
     

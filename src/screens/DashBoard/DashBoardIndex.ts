@@ -19,27 +19,11 @@ import EditBannerCss from "../../components/dashBoardComponents/Banner/Banner.cs
 class Container extends HTMLElement {
 
     categoriesmain: CategoriesMain[]=[]
-    contact: Contacts[] = []
-    activity: LastActivity[]= []
     cards: CardUser[]=[]
 
     constructor(){
         super()
         this.attachShadow({mode: "open"})
-
-        data.forEach((contactsview) => {
-            const newContact = this.ownerDocument.createElement("contact-info") as Contacts;
-            newContact.setAttribute(ContactAttributes.username, contactsview.username)
-            newContact.setAttribute(ContactAttributes.profileimage, contactsview.profileImage)
-            this.contact.push(newContact)
-        });
-
-        dataActivity.forEach((activitycontacts) => {
-            const newuserActivity = this.ownerDocument.createElement("last-activity") as LastActivity;
-            newuserActivity.setAttribute(ActivityAttributes.user, activitycontacts.user)
-            this.activity.push(newuserActivity)
-        });
-
         //data de los botones main
         ButtonData.forEach((maincategorie) => {
             const categories = this.ownerDocument.createElement("categories-main") as CategoriesMain;
@@ -145,7 +129,7 @@ class Container extends HTMLElement {
             //texto sección comentarios
                 const textComent = this.ownerDocument.createElement("h1")
                 textComent.classList.add("titulo-seccion-comentarios")
-                textComent.textContent = "Watch the projects of your contacts!"
+                textComent.textContent = "Want to show off? Share your project!"
                 dashboard.appendChild(textComent)
 
             //post
@@ -153,15 +137,10 @@ class Container extends HTMLElement {
                 comentarioMain.classList.add("comentario-dashboard")
                 comentarioMain.setAttribute(ProjectAttribute.nameuser, "@mailubb")
                 comentarioMain.setAttribute(ProjectAttribute.descrip, "painting in bora bora")
-                    comentarioMain.setAttribute(ProjectAttribute.project, "https://s3-alpha-sig.figma.com/img/dbce/582c/078c7e1345b721c72aeb97e960f2bf38?Expires=1696204800&Signature=gpLLPJDODxdivn8cyF7-QbicGyK6glA5R2dcpbulQg~nNhP6-VWYeaesZemNRO-6Xuj2RIhV0slSDPe3FnuCPesx-3YqZq~O-xRHLumqLjH4J9iJGWFDriy2fvRrrCRwJ49K~Zwi57493MVETvOvtnMuK-1BkHI7t2FkkgPXjAZRWU5FeMRiJ52-NKX25ecGQ-B2XD3XilAaOIyfOGQjA-qY-9AHeE-KRWhHDHqCryH6sXKckNG38owMkz0ESO771DuJ8SQyXTgJUZyXFAJ4fXisBsbG4roskV-CCFV728ZL~xy4DLigB2vVPwULJPDb4tRoA~M6dOcokTo38-SOjQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+                comentarioMain.setAttribute(ProjectAttribute.project, "https://cdn.icon-icons.com/icons2/3252/PNG/512/image_add_regular_icon_204373.png")
                 comentarioMain.setAttribute(ProjectAttribute.send, "https://static.thenounproject.com/png/1015120-200.png")
+                comentarioMain.setAttribute(ProjectAttribute.user, "M")
                 dashboard.appendChild(comentarioMain)
-
-            //texto para el usuario
-                // //const titlecomment = this.ownerDocument.createElement("h1")
-                // titlecomment.classList.add("titulo-comentario")
-                // titlecomment.textContent = "Write your comment instantly!"
-                // dashboard.appendChild(titlecomment)//
 
             //comentario de los contactos
               const viewcoments = this.ownerDocument.createElement("coment-main")
@@ -196,25 +175,7 @@ class Container extends HTMLElement {
             //fin textos
 
             //contactos componente
-            const contactContainer = this.ownerDocument.createElement("section")
-            contactContainer.appendChild(textContact)
-            contactContainer.classList.add("contactContainer")
-            this.contact.forEach((contactsview)=>{
-                contactContainer.appendChild(contactsview)
-            })
-            nav.appendChild(contactContainer)
-
-            //last activity component
-            const activityContainer = this.ownerDocument.createElement("section")
-            activityContainer.appendChild(tittleActivity)
-            activityContainer.appendChild(textActivity)
-            activityContainer.classList.add("containerActivity")
-            this.activity.forEach((activitycontacts)=>{
-                activityContainer.appendChild(activitycontacts)
-            })
             
-            nav.appendChild(activityContainer)
-            activityContainer.appendChild(moreGrafik)
             this.shadowRoot.appendChild(nav);
 
             //footer//
