@@ -11,6 +11,11 @@ export enum ProjectAttribute {
     "user" = "user"
 }
 
+const formsPost = {
+    link: "",
+    description: ""
+}
+
 class ProjectCard extends HTMLElement {
     nameuser?: string
     descrip?: string
@@ -52,6 +57,20 @@ class ProjectCard extends HTMLElement {
 
     connectedCallback(){
         this.mount()
+
+        const imgInput = this.shadowRoot?.querySelector(".input-link")
+        imgInput?.addEventListener("change", this.changeImg)
+
+        const descriptionPost = this.shadowRoot?.querySelector(".input")
+        descriptionPost?.addEventListener("change", this.changeDes)
+    }
+
+    changeImg(e: any){
+        formsPost.link = e.target.value;
+    }
+
+    changeDes(e: any){
+        formsPost.description = e.target.value;
     }
 
     mount(){
@@ -68,7 +87,7 @@ class ProjectCard extends HTMLElement {
                 <div class= "foto-container">
                     <img src="${this.project}" alt="" class="project-pic">
                 </div>
-                <p class="text-upload">Upload image</p>
+                <input class="input-link" type="text" placeholder="put the link of you image">
             </div>
             <style>${EditWriteCss}</style>
             <div class="container">
