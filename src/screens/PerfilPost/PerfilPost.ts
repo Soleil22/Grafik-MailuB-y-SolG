@@ -2,7 +2,7 @@ import EditPerfilPostCss from "./PerfilPost.css"
 import TarjetUser, {TarjetUserAttributes} from "../../components/PerfilUserComponents/TarjetUser/TarjetUser"
 import NavUp, {NavUpAttribute} from "../../components/PerfilUserComponents/IconsNavUp/IconsNavUp";
 import Posts, {PostAttributes} from "../../components/PerfilUserComponents/PostsoftheUser/postUserProfile";
-import { postProfile } from "../../data/ProfileUserData";
+import firebase from "../../utils/firebase";
 
 class PerfilPostUser extends HTMLElement {
 
@@ -13,7 +13,15 @@ class PerfilPostUser extends HTMLElement {
         this.attachShadow({mode: "open"})
     }
 
-    connectedCallback(){
+    async connectedCallback(){
+        const posts = await firebase.getPostUser()
+        posts.forEach(async (post:any) => {
+            const postImage = this.ownerDocument.createElement("post-user-component") as Posts
+            postImage.setAttribute(PostAttributes.imagen, post.link)
+            postImage.setAttribute(PostAttributes.titulo, post.description)
+            this.userp.push(postImage)
+        })
+
         this.render()
     }
 
@@ -48,12 +56,12 @@ class PerfilPostUser extends HTMLElement {
 
             
 
-            postProfile.forEach((userimg)=> {
+           /* postProfile.forEach((userimg)=> {
                 const postImage = this.ownerDocument.createElement("post-user-component") as Posts
                     postImage.setAttribute(PostAttributes.imagen, userimg.post)
                     postImage.setAttribute(PostAttributes.titulo, userimg.title)
                     this.userp.push(postImage)
-                })
+                })*/
     
                 const PostpapaContainer = this.ownerDocument.createElement("section")
                 PostpapaContainer.classList.add("contenedor-post-papa")

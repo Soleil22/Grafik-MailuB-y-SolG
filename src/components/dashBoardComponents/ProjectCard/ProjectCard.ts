@@ -66,7 +66,7 @@ class ProjectCard extends HTMLElement {
         descriptionPost?.addEventListener("change", this.changeDes)
 
         const upload = this.shadowRoot?.querySelector(".buttonUpload")
-        upload?.addEventListener("click", this.uploadForm)
+        upload?.addEventListener("click", () => {this.uploadForm(imgInput, descriptionPost)})
     }
 
     changeImg(e: any){
@@ -77,8 +77,10 @@ class ProjectCard extends HTMLElement {
         formsPost.description = e.target.value;
     }
 
-    uploadForm (){
+    uploadForm (imgInput: any, descriptionPost: any){
         firebase.addPost(formsPost)
+        imgInput.value = ""
+        descriptionPost.value = ""
         this.render()
     }
 
