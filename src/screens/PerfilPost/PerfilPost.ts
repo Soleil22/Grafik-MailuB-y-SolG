@@ -1,6 +1,8 @@
 import EditPerfilPostCss from "./PerfilPost.css"
 import TarjetUser, {TarjetUserAttributes} from "../../components/PerfilUserComponents/TarjetUser/TarjetUser"
 import NavUp, {NavUpAttribute} from "../../components/PerfilUserComponents/IconsNavUp/IconsNavUp";
+import Tendencies,{TendencyAttributes} from "../../components/tendenciesPostsComponents/tendencyPost/tendencyPost";
+import { postProfile } from "../../data/ProfileUserData";
 
 class PerfilPostUser extends HTMLElement {
 
@@ -33,7 +35,27 @@ class PerfilPostUser extends HTMLElement {
             TarjetUser.setAttribute(TarjetUserAttributes.bought, "17")
             TarjetUser.setAttribute(TarjetUserAttributes.followers, "220")
             TarjetUser.setAttribute(TarjetUserAttributes.friends, "35")
-            this.shadowRoot.appendChild(TarjetUser)  
+            this.shadowRoot.appendChild(TarjetUser) 
+
+            postProfile.forEach((postimg)=> {
+                const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
+                    postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
+                    postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
+                    this.posts.push(postDesigner)
+                })
+    
+                const PostDadContainer = this.ownerDocument.createElement("section")
+                PostDadContainer.classList.add("contenedor-post-papa")
+                this.posts.forEach((postimg) => {
+                    PostDadContainer.appendChild(postimg)
+                })
+                console.log(tendenciesData)
+                this.shadowRoot.appendChild(PostDadContainer)
+    
+
+
+
+
         }
     }
 }

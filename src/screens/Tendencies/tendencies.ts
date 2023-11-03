@@ -77,7 +77,7 @@ class TendenciesScreen extends HTMLElement{
 
             
         }
-    }
+    } 
 }
 
 customElements.define("tendencies-container", TendenciesScreen)
