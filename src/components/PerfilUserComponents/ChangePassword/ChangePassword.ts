@@ -1,5 +1,9 @@
 import EditPasswordCss from "./ChangePassword.css"
 
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 export enum InputChangeAttributes {
     "text"="text",
     "text2"="text2"
@@ -30,10 +34,19 @@ class InputTextChange extends HTMLElement {
     constructor(){
         super()
         this.attachShadow({mode: "open"})
+        addObserver(this);
     }
 
-    connectedCallback(){
+    async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector("#cancel");
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.DASHBOARD))
+        })
+        const buttonp = this.shadowRoot?.querySelector("#change");
+        buttonp?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.USERPOST))
+        })
     }
 
     render(){
@@ -51,8 +64,8 @@ class InputTextChange extends HTMLElement {
             <p>Repeat password</p>
             <input class="input" type="password" placeholder="${this.text2}">
             <div>
-            <button class="button">cancel change</button>
-            <button class="button">change password</button>
+            <button class="button" id="cancel">cancel change</button>
+            <button class="button" id="change">change password</button>
             </div>
             </div>
             `

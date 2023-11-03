@@ -43,6 +43,10 @@ class NavUpIcons extends HTMLElement {
         button?.addEventListener(('click'), () =>{
           dispatch(navigate(Screens.LOGIN))
         })
+        const buttonicon = this.shadowRoot?.querySelector(".app-img");
+        buttonicon?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.DASHBOARD))
+        })
     }
 
     render(){
