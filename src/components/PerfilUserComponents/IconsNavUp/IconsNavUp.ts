@@ -1,3 +1,7 @@
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 import EditNaveUpCss from "./IconsNavUp.css"
 
 export enum NavUpAttribute {
@@ -30,10 +34,19 @@ class NavUpIcons extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: "open"});
+        addObserver(this);
     }
 
-    connectedCallback(){
+    async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector("button");
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.LOGIN))
+        })
+        const buttonicon = this.shadowRoot?.querySelector(".app-img");
+        buttonicon?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.DASHBOARD))
+        })
     }
 
     render(){

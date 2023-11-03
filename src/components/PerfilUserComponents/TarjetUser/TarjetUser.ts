@@ -1,5 +1,9 @@
 import EditTarjetUserCss from "./TarjetUser.css"
 
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 export enum TarjetUserAttributes {
     "perfil" = "perfil",
     "name"="name",
@@ -46,10 +50,15 @@ class TarjetUser extends HTMLElement {
     constructor(){
         super()
         this.attachShadow({mode: "open"})
+        addObserver(this);
     }
 
-    connectedCallback(){
+    async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector(".change");
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.PERFILUSER))
+        })
     }
 
     render(){
@@ -81,7 +90,7 @@ class TarjetUser extends HTMLElement {
             </div>
             </div>
             <div class="button-container">
-            <button>Change password</button>
+            <button class="change">Change password</button>
             </div>
         </div>
             `

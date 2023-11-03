@@ -66,13 +66,6 @@ class TendenciesScreen extends HTMLElement{
             this.shadowRoot.appendChild(navLeftContainer)
             this.shadowRoot.appendChild(nav);
 
-            //prueba
-
-            //  const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
-            //    postDesigner.setAttribute(TendencyAttributes.username, "@mailubb" )
-            //    postDesigner.setAttribute(TendencyAttributes.post, "https://s3-alpha-sig.figma.com/img/f59c/3b7c/8bdead2c10093a3f3dfec02e19eda10b?Expires=1699833600&Signature=fQOF0-ENFlzoKjlsO6Uwi4uUhpVXib~1NMSKjAJPetROg00Y5swX4YozZzJ9IEKAlbhVxySbRckdurg9h1OuS2BKQYxQs8vTt4OX-wZrnthgNRTJjhavVuuBJTS-89x7LeTZ~FAk9vN4wpUxPTlVWxHLHnMH0VJl5ZB9wPDHYkJ804y0fVsbt6B3EKlEQoOw6x-RrFAzhCxeW3W~zSncq0oDb2mh2HdIop1CJ4ME5QZC~q9bq6r1-3FNqmsX9ysGj4NBaWavt4dxZORIbkUzz8jTK34KvJpV69apNgmnfP-Fj6r3-t6sYaIaef7D6pxqVg74FYbz-WLNblWBWhOVXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            // this.shadowRoot.appendChild(postDesigner)
-
             const footerContainer = this.ownerDocument.createElement("footer-main") as Footer
             footerContainer.setAttribute(FooterAttributes.logo, "Grafik.com")
             footerContainer.setAttribute(FooterAttributes.options1, "Market place")

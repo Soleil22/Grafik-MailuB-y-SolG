@@ -1,5 +1,9 @@
 import EditNavLeft from "./navLeft.css"
 
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 export enum NavLeftAttributes {
     "profileimg" = "profileimg",
     "username" = "username"
@@ -30,10 +34,15 @@ class NavLeft extends HTMLElement {
      constructor(){
         super()
         this.attachShadow({mode:"open"})
+        addObserver(this);
      }
 
-     connectedCallback(){
+     async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector(".imagen");
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.USERPOST))
+        })
      }
 
      render(){
@@ -42,7 +51,7 @@ class NavLeft extends HTMLElement {
             <style>${EditNavLeft}</style>
             <div class="navLeft">
                 <div class="imgProfile">
-                    <img src="${this.profileimg}">
+                    <img class="imagen" src="${this.profileimg}">
                     <p>Hi, ${this.username}</p>
                 </div>
                 <div class="buttonContainer">

@@ -1,5 +1,9 @@
 import EditNaveUpCss from "./NavUp.css"
 
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
+
 export enum NavUpAttribute {
     "appicon" = "appicon",
     "bell" = "bell"
@@ -32,8 +36,12 @@ class NavUp extends HTMLElement {
         this.attachShadow({mode: "open"});
     }
 
-    connectedCallback(){
+    async connectedCallback(){
         this.render()
+        const button = this.shadowRoot?.querySelector('button');
+        button?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.LOGIN))
+        })
     }
 
     render(){
