@@ -1,3 +1,5 @@
+import EditWriteCss from "./writeComent.css"
+
 export enum WritecomentAttribute {
     "user" = "user"
 }
@@ -34,6 +36,17 @@ class NavUp extends HTMLElement {
     render(){
         if(this.shadowRoot){
            this.shadowRoot.innerHTML = `
+            <style>${EditWriteCss}</style>
+            <div class="container">
+            <p>Post description</p>
+            <div>
+            <p>${this.user}</p>
+            <input type="text" placeholder="Add a description for your post">
+            </div>
+            <div>
+            <button>UPLOAD</button>
+            </div>
+            </div>
             `
         }
     }
