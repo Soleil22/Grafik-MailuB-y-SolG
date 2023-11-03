@@ -64,12 +64,7 @@ class ProjectCard extends HTMLElement {
                 <div class= "foto-container">
                     <img src="${this.project}" alt="" class="project-pic">
                 </div>
-            <p class="nombre-user">${this.nameuser}</p>
-            <p class="descripcion">${this.descrip}</p>
-            </div>
-            <div class="containericons">
-            <img src="${this.like}" alt="" class="heart">
-            <img src="${this.send}" alt="" class="send">
+                <p class="text-upload">Upload image</p>
             </div>
             `
         }
