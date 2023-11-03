@@ -82,6 +82,8 @@ class TendenciesScreen extends HTMLElement{
             this.shadowRoot.appendChild(footerContainer)
 
             
+
+            
         }
     } 
 }
