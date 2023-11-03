@@ -45,7 +45,11 @@ class NavLeft extends HTMLElement {
         })
         const buttonT = this.shadowRoot?.querySelector(".buttonTend");
         buttonT?.addEventListener(('click'), () =>{
-          dispatch(navigate(Screens.TENDENCIES))
+        dispatch(navigate(Screens.TENDENCIES))
+        })
+        const buttonH = this.shadowRoot?.querySelector(".buttonHome");
+        buttonH?.addEventListener(('click'), () =>{
+        dispatch(navigate(Screens.DASHBOARD))
         })
      }
 

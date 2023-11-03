@@ -46,6 +46,7 @@
     text-align: center;
     font-size: 0.9rem;
     margin-right: 200vh;
+    z-index: 100;
 }
 
 .buttonHome{
@@ -59,4 +60,5 @@
     text-align: center;
     font-size: 0.9rem;
     margin-right: 200vh;
+    z-index: 100;
 }
