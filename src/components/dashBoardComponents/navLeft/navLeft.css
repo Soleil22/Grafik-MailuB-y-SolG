@@ -35,19 +35,7 @@
     margin-left: 5.8rem;
 }
 
-.buttonNav{
-    background-color: transparent;
-    border-color: transparent;
-    font-weight: 500;
-    color: #FFF;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-right: 200vh;
-   
-    
-}
-
-.buttonUP{
+.buttonTend{
     background-color: #601FEB;
     border-radius: 0.625rem;
     border-color: transparent;
@@ -58,5 +46,17 @@
     text-align: center;
     font-size: 0.9rem;
     margin-right: 200vh;
+}
 
+.buttonHome{
+    background-color: #601FEB;
+    border-radius: 0.625rem;
+    border-color: transparent;
+    width: 6.5rem;
+    height: 1.8rem;
+    font-weight: 600;
+    color: #FFF;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-right: 200vh;
 }
