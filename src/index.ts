@@ -63,7 +63,7 @@ class AppContainer extends HTMLElement {
         //         break;
             }
     }
-
+}
 
 
 customElements.define('app-container', AppContainer)

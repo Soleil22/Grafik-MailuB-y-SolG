@@ -43,6 +43,10 @@ class NavLeft extends HTMLElement {
         button?.addEventListener(('click'), () =>{
           dispatch(navigate(Screens.USERPOST))
         })
+        const buttonT = this.shadowRoot?.querySelector("#tendencies");
+        buttonT?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.TENDENCIES))
+        })
      }
 
      render(){
@@ -57,9 +61,9 @@ class NavLeft extends HTMLElement {
                 <div class="buttonContainer">
                     <button class="buttonUP">UPLOAD</button>
                     <button class="buttonNav">Home</button>
-                    <button class="buttonNav">Discussion</button>
+                    <button class="buttonNav" >Discussion</button>
                     <button class="buttonNav">Following</button>
-                    <button class="buttonNav">Tendencies</button>
+                    <button class="buttonNav" id="tendencies">Tendencies</button>
                     <button class="buttonNav">Shop</button>
                     <button class="buttonNav">Files</button>
                 </div>
