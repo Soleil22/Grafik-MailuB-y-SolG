@@ -30,7 +30,7 @@ const db = getFirestore(app);
 }*/
 
 const getPost = async() => {
-  const querySnapshot = await getDocs(collection(db, "post"))
+  const querySnapshot = await getDocs(collection(db, "TendenciesPosts"))
   const transformed:any = []
 
   querySnapshot.forEach((doc)=>{
