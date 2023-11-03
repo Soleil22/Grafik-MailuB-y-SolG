@@ -1,0 +1,15 @@
+.contenedor-post-papa{
+    display: grid;
+        grid-template-columns: 280px 280px 280px;
+        position: absolute;
+        margin-left: 38rem;
+        margin-top: -45rem;
+}
+
+.title-posts{
+    position: absolute;
+    margin-left: 41rem;
+    font-family: 'Sora', sans-serif;
+    font-size: 4rem;
+    
+}
