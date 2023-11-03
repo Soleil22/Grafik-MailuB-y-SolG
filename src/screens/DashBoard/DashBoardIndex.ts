@@ -141,11 +141,8 @@ class Container extends HTMLElement {
                 comentarioMain.setAttribute(ProjectAttribute.send, "https://static.thenounproject.com/png/1015120-200.png")
                 dashboard.appendChild(comentarioMain)
 
-            //texto para el usuario
-                // //const titlecomment = this.ownerDocument.createElement("h1")
-                // titlecomment.classList.add("titulo-comentario")
-                // titlecomment.textContent = "Write your comment instantly!"
-                // dashboard.appendChild(titlecomment)//
+            //add post
+                const inputUpload = this.ownerDocument.createElement("")
 
             //comentario de los contactos
               const viewcoments = this.ownerDocument.createElement("coment-main")

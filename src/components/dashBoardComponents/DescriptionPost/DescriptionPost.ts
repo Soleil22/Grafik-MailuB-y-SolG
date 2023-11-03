@@ -1,20 +1,20 @@
-import EditWriteCss from "./writeComent.css"
+import EditWriteCss from "./DescriptionPost.css"
 
-export enum WritecomentAttribute {
+export enum DescriptionAttribute {
     "user" = "user"
 }
 
-class NavUp extends HTMLElement {
+class DescriptionPost extends HTMLElement {
     user?: string
 
     static get observedAttributes(){
-        const attrs: Record<WritecomentAttribute,null> = {
+        const attrs: Record<DescriptionAttribute,null> = {
             user: null
         }
         return Object.keys(attrs);
     }
 
-    attributeChangedCallback(propName:WritecomentAttribute,oldValue: string | undefined,newValue: string | undefined){
+    attributeChangedCallback(propName:DescriptionAttribute,oldValue: string | undefined,newValue: string | undefined){
         switch(propName){
             default: 
             this[propName] = newValue;
@@ -53,5 +53,5 @@ class NavUp extends HTMLElement {
 }
 
 
-customElements.define("upper-navigator", NavUp)
-export default NavUp
+customElements.define("description-post", DescriptionPost)
+export default DescriptionPost
