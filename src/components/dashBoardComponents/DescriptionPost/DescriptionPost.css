@@ -1,6 +1,6 @@
 .container{
     position: absolute;
-    margin-left: 50rem;
+    margin-left: 52rem;
     margin-top: 93rem;
 }
 .container p{
@@ -19,13 +19,20 @@
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 600;
-    background-color: #BABABA;
+    text-align: center;
+}
+
+.cajita{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: linear-gradient(0deg, #C4C4C4 0%, #C4C4C4 100%), #FBFFEA;    ;
     border-radius: 50%;
     border: 2px solid #601FEB;
     width: 3.07669rem;
     height: 3.07669rem;
-    text-align: center;
     margin-top: -0.1rem;
+    margin-top: 0.5rem;
 }
 
 .input{
@@ -42,6 +49,7 @@
     font-weight: 400;
     line-height: normal;
     margin-bottom: 2rem;
+    padding-left: 1.5rem;
 }
 
 
@@ -65,5 +73,5 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.09375rem;
-    margin-left: 9.7rem;
+    margin-left: 11rem;
 }
