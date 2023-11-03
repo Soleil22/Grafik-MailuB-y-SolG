@@ -1,6 +1,6 @@
 .container{
     position: absolute;
-    margin-left: 55rem;
+    margin-left: 50rem;
     margin-top: 93rem;
 }
 .container p{
@@ -10,15 +10,22 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-left: 5.4rem;
 }
 
 .container h4{
     color: #601FEB;
     font-family: Poppins;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    background-color: #BABABA;
+    border-radius: 50%;
+    border: 2px solid #601FEB;
+    width: 3.07669rem;
+    height: 3.07669rem;
+    text-align: center;
+    margin-top: -0.1rem;
 }
 
 .input{
@@ -34,7 +41,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 2rem;
 }
+
 
 .user-input{
     display: flex;
@@ -56,4 +65,5 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.09375rem;
+    margin-left: 9.7rem;
 }
