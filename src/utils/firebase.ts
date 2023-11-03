@@ -40,6 +40,17 @@ const getPost = async() => {
   return transformed
 }
 
+const getPostUser = async() => {
+  const querySnapshot = await getDocs(collection(db, "UploadFilesUser"))
+  const transformed:any = []
+
+  querySnapshot.forEach((doc)=>{
+    const data = doc.data()
+    transformed.push({id: doc.id, ...data})
+  })
+  return transformed
+}
+
 export const addPost = async (post: any) => {
   try{
       const where = collection(db, "UploadFilesUser")
@@ -51,5 +62,6 @@ export const addPost = async (post: any) => {
 
 export default {
   getPost,
-  addPost
+  addPost,
+  getPostUser
 }

@@ -1,5 +1,6 @@
 import EditProjectCardCss from "./ProjectCard.css"
 import EditWriteCss from "./DescriptionPost.css"
+import firebase from "../../../utils/firebase"
 
 export enum ProjectAttribute {
     "nameuser" = "nameuser",
@@ -63,6 +64,9 @@ class ProjectCard extends HTMLElement {
 
         const descriptionPost = this.shadowRoot?.querySelector(".input")
         descriptionPost?.addEventListener("change", this.changeDes)
+
+        const upload = this.shadowRoot?.querySelector(".buttonUpload")
+        upload?.addEventListener("click", this.uploadForm)
     }
 
     changeImg(e: any){
@@ -71,6 +75,11 @@ class ProjectCard extends HTMLElement {
 
     changeDes(e: any){
         formsPost.description = e.target.value;
+    }
+
+    uploadForm (){
+        firebase.addPost(formsPost)
+        this.render()
     }
 
     mount(){
