@@ -15,6 +15,7 @@ import Footer,{FooterAttributes} from "../../components/dashBoardComponents/foot
 import EditMainCss from "./main.css"
 import EditShadowCss from "./shadowroot.css"
 import EditBannerCss from "../../components/dashBoardComponents/Banner/Banner.css"
+import DescriptionPost, {DescriptionAttribute}from "../../components/dashBoardComponents/DescriptionPost/DescriptionPost"
 
 class Container extends HTMLElement {
 
@@ -142,7 +143,10 @@ class Container extends HTMLElement {
                 dashboard.appendChild(comentarioMain)
 
             //add post
-                const inputUpload = this.ownerDocument.createElement("")
+                const inputUpload = this.ownerDocument.createElement("description-post") as DescriptionPost
+                inputUpload.classList.add("description")
+                inputUpload.setAttribute(DescriptionAttribute.user, "M")
+                this.shadowRoot.appendChild(inputUpload)
 
             //comentario de los contactos
               const viewcoments = this.ownerDocument.createElement("coment-main")

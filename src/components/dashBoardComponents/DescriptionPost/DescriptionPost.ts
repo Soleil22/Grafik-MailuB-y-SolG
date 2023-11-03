@@ -39,12 +39,14 @@ class DescriptionPost extends HTMLElement {
             <style>${EditWriteCss}</style>
             <div class="container">
             <p>Post description</p>
-            <div>
-            <p>${this.user}</p>
-            <input type="text" placeholder="Add a description for your post">
+            <div class="user-input">
+            <div class="cajita">
+            <h4>${this.user}</h4>
+            </div>
+            <input class="input" type="text" placeholder="Add a description for your post">
             </div>
             <div>
-            <button>UPLOAD</button>
+            <button class="buttonUpload">UPLOAD</button>
             </div>
             </div>
             `

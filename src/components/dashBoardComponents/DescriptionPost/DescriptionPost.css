@@ -1,0 +1,59 @@
+.container{
+    position: absolute;
+    margin-left: 55rem;
+    margin-top: 93rem;
+}
+.container p{
+    color: #000;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.container h4{
+    color: #601FEB;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.input{
+    width: 29.625rem;
+    height: 18.04275rem;
+    flex-shrink: 0;
+    border-radius: 0.8125rem;
+    border: 2px solid #601FEB;
+    background: #FFF;
+    color: #BABABA;
+    font-family: Poppins;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.user-input{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.buttonUpload{
+    width: 21.4375rem;
+    height: 2.25rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: #601FEB;
+    border: none;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.09375rem;
+}
