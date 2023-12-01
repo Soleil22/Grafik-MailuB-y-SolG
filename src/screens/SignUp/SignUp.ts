@@ -18,8 +18,12 @@ class SignUpContainer extends HTMLElement {
         this.attachShadow({ mode: "open" })
     }
 
-    connectedCallback() {
-        this.render()          
+   async connectedCallback() {
+        this.render()    
+        const buttons = this.shadowRoot?.querySelector(".btn-log");
+        buttons?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.LOGIN))
+        })      
     }
 
     async handleRegisterButton() {
@@ -87,6 +91,21 @@ class SignUpContainer extends HTMLElement {
             registerBtn.addEventListener('click', this.handleRegisterButton)
             containerB.appendChild(registerBtn)
             this.shadowRoot.appendChild(containerB) 
+            
+            const containerSignUp = this.ownerDocument.createElement("section")
+            containerSignUp.classList.add("container-sign")
+
+            const text = this.ownerDocument.createElement("a")
+            text.classList.add("password-forgot")
+            text.innerText = "Already have an account?"
+            containerSignUp.appendChild(text)
+
+            const btnSign = this.ownerDocument.createElement("button")
+            btnSign.classList.add("btn-log")
+            btnSign.innerText = "LOG IN"
+            containerSignUp.appendChild(btnSign)
+
+            this.shadowRoot.appendChild(containerSignUp)
         }
 
     }

@@ -1,0 +1,26 @@
+.password-forgot{
+    color: rgba(0, 0, 0, 0.85);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration-line: underline;
+    margin-left: 38rem;
+}
+
+.btn-log{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5.8125rem;
+    background: #B9E901;
+    color: #601FEB;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+}
