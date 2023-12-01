@@ -4,7 +4,8 @@ import RectangleInformation, {LogInAttributes} from "../../components/LogInCompo
 import InputText, {InputTextAttributes} from "../../components/LogInComponents/InputText/InputText"
 import ButtonsLogin, {ButtonAttributes} from "../../components/LogInComponents/Buttons/Buttons"
 import DecorationBackground, {DecorationAttributes}  from "../../components/LogInComponents/DecorationBackground/DecorationBackground"
-
+import firebase from "../../utils/firebase"
+const credentials = { email: '', password: '' }
 class LogInContainer extends HTMLElement {
 
     constructor(){
@@ -14,6 +15,10 @@ class LogInContainer extends HTMLElement {
 
     connectedCallback(){
         this.render()
+    }
+
+   async handleLoginButton(){
+        firebase.loginUser(credentials)
     }
 
     render(){
@@ -32,61 +37,6 @@ class LogInContainer extends HTMLElement {
             RectangleContainer.setAttribute(LogInAttributes.logo3, "https://www.svgrepo.com/show/108614/linkedin.svg")
             RectangleContainer.setAttribute(LogInAttributes.textsmall, "or use your email")
             this.shadowRoot.appendChild(RectangleContainer)  
-            
-            /*const InputText = this.ownerDocument.createElement("input-text") as InputText
-            InputText.classList.add("input-text")
-            InputText.setAttribute(InputTextAttributes.text, "email")
-            InputText.setAttribute(InputTextAttributes.text2, "password")
-            this.shadowRoot.appendChild(InputText)*/
-            const InputEmail = this.ownerDocument.createElement('input')
-            InputEmail.classList.add("input")
-            InputEmail.placeholder="email"
-            /*InputEmail.type = 'email'
-            InputEmail.addEventListener('change', (e: any) => {
-                credentials.email = e.target.value
-            })*/
-
-            const InputPass = this.ownerDocument.createElement('input')
-            InputPass.classList.add("input")
-            InputPass.placeholder="password"
-          /*  InputPass.type = 'password'
-            InputPass.addEventListener('change', (e: any) => {
-                credentials.password = e.target.value
-            })*/
-
-            const logBtn = this.ownerDocument.createElement('button')
-            logBtn.classList.add("button-signup")
-            logBtn.innerText="LOG IN" 
-            this.shadowRoot.appendChild(logBtn)
-
-            this.shadowRoot.appendChild(InputEmail)
-            this.shadowRoot.appendChild(InputPass)
-
-            const linkPasswordForgot = this.ownerDocument.createElement("a")
-            linkPasswordForgot.classList.add("password-forgot")
-            linkPasswordForgot.textContent="Forgot your password?"
-            this.shadowRoot.appendChild(linkPasswordForgot)
-
-            /*const ButtonLogIn = this.ownerDocument.createElement("button")
-            ButtonLogIn.classList.add("button-remember")
-            this.shadowRoot.appendChild(ButtonLogIn)*/
-            //estilo en CSS
-            /*
-            .button-remember{
-            border-radius: 100rem;
-            background: #ffffff;
-            border-color: #601FEB;
-            width: 0.9rem;
-            height: 0.9rem;
-            }
-            */
-
-            const ButtonsLogIn = this.ownerDocument.createElement("buttons-login") as ButtonsLogin
-            ButtonsLogIn.classList.add("Buttons-login")
-            ButtonsLogIn.setAttribute(ButtonAttributes.textlogin, "LOG IN")
-            ButtonsLogIn.setAttribute(ButtonAttributes.remember, "Don't have an account yet?")
-            ButtonsLogIn.setAttribute(ButtonAttributes.textsignup, "SIGN UP")
-            this.shadowRoot.appendChild(ButtonsLogIn)
 
             //background decoration
             const decoration = this.ownerDocument.createElement("decoration-container") as DecorationBackground
@@ -99,6 +49,51 @@ class LogInContainer extends HTMLElement {
             decoration.setAttribute(DecorationAttributes.img6, "https://github.com/Soleil22/imagenes-grafik/blob/main/emoticon%20login%20y%20sign%20up.png?raw=true")
             decoration.setAttribute(DecorationAttributes.img7, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1702252800&Signature=FDuVTQOjTriLMCxJmkw3OwGgyhYPjt3cVLh-3bQ1NJKdaL31bHCwYH2hEKfmmHo0j8TO9A3HnHNmn29o2GKhw4AUXj7KePP6CaVZiajHNKOLzQ-hJMvAgX8eZLhCVYcM4DaRrlUf9zZrGEyRkCarbi0yY8gSO-zf3O9oX4iH4psL901yS6Yuffd~MTcG7G9WAv5hExwBFQmZqsxQK65yoOPDJI0nHcJWnniMiIK7SuFIDcyTVsXvf4WWC2i2qPwwNG6y5oh7exbDMGZWMzW9FfQeBdtAf86xU9~mBJvEAkq6orOOwlbmb1U4tgqickMbMVmnPDKotgR8Wl1jXe0KHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
             this.shadowRoot.appendChild(decoration)
+
+            const formLogin = this.ownerDocument.createElement("section")
+            formLogin.classList.add("container-input")
+            const InputEmail = this.ownerDocument.createElement('input')
+            InputEmail.classList.add("input")
+            InputEmail.placeholder="email"
+            InputEmail.type = 'email'
+            InputEmail.addEventListener('change', (e: any) => {
+             credentials.email = e.target.value
+            })
+
+            const InputPass = this.ownerDocument.createElement('input')
+            InputPass.classList.add("input")
+            InputPass.placeholder="password"
+            InputPass.type = 'password'
+            InputPass.addEventListener('change', (e: any) => {
+              credentials.password = e.target.value
+            })
+
+            formLogin.appendChild(InputEmail)
+            formLogin.appendChild(InputPass)
+            this.shadowRoot.appendChild(formLogin)
+            
+            const containerB = this.ownerDocument.createElement("section")
+            containerB.classList.add("container-signup")
+            const registerBtn = this.ownerDocument.createElement('button')
+            registerBtn.classList.add("button-signup")
+            registerBtn.innerText="LOG IN"
+            registerBtn.addEventListener('click', this.handleLoginButton)
+            containerB.appendChild(registerBtn)
+            this.shadowRoot.appendChild(containerB) 
+
+            const containerSignUp = this.ownerDocument.createElement("section")
+            containerSignUp.classList.add("container-sign")
+
+            const text = this.ownerDocument.createElement("a")
+            text.innerText = "Don’t have an account yet?"
+            containerSignUp.appendChild(text)
+
+            const btnSign = this.ownerDocument.createElement("button")
+            btnSign.innerText = "SIGN UP"
+            containerSignUp.appendChild(btnSign)
+
+            this.shadowRoot.appendChild(containerSignUp)
+
         }
     }
 }

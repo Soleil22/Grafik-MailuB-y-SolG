@@ -57,15 +57,6 @@ class SignUpContainer extends HTMLElement {
             decoration.setAttribute(DecorationAttributes.img7, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1702252800&Signature=FDuVTQOjTriLMCxJmkw3OwGgyhYPjt3cVLh-3bQ1NJKdaL31bHCwYH2hEKfmmHo0j8TO9A3HnHNmn29o2GKhw4AUXj7KePP6CaVZiajHNKOLzQ-hJMvAgX8eZLhCVYcM4DaRrlUf9zZrGEyRkCarbi0yY8gSO-zf3O9oX4iH4psL901yS6Yuffd~MTcG7G9WAv5hExwBFQmZqsxQK65yoOPDJI0nHcJWnniMiIK7SuFIDcyTVsXvf4WWC2i2qPwwNG6y5oh7exbDMGZWMzW9FfQeBdtAf86xU9~mBJvEAkq6orOOwlbmb1U4tgqickMbMVmnPDKotgR8Wl1jXe0KHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
             this.shadowRoot.appendChild(decoration)
 
-            //inputs text
-           /* const InputText = this.ownerDocument.createElement("input-text-sign") as Inputs
-            InputText.classList.add("input-text")
-            InputText.setAttribute(InputSignAttributes.text, "email")
-            InputText.setAttribute(InputSignAttributes.text2, "full name")
-            InputText.setAttribute(InputSignAttributes.pass, "new password")
-            InputText.setAttribute(InputSignAttributes.pass2, "repeat password")
-            this.shadowRoot.appendChild(InputText)*/
-
             const formSignUp = this.ownerDocument.createElement("section")
             formSignUp.classList.add("container-input")
             const InputEmail = this.ownerDocument.createElement('input')

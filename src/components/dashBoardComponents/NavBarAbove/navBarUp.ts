@@ -41,7 +41,7 @@ class NavUp extends HTMLElement {
         this.render()
         const button = this.shadowRoot?.querySelector('button');
         button?.addEventListener(('click'), () =>{
-          firebase.signOff
+          firebase.signOff()
         })
     }
 

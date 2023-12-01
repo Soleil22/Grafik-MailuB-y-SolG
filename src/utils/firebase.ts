@@ -64,6 +64,7 @@ const loginUser = async ({
     return true
   } catch (error) {
     console.log(error);
+    alert("Mmm... Parece que te has equivocado :(")
     return false
   }
 }
@@ -125,6 +126,7 @@ onAuthStateChanged(auth, (user) => {
     // https://firebase.google.com/docs/reference/js/auth.user
     const uid = user.uid;
     console.log(uid);
+    
     dispatch(navigate(Screens.DASHBOARD))
     
     
