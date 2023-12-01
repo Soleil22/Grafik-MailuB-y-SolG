@@ -137,7 +137,7 @@ class Container extends HTMLElement {
                 comentarioMain.classList.add("comentario-dashboard")
                 comentarioMain.setAttribute(ProjectAttribute.nameuser, "@mailubb")
                 comentarioMain.setAttribute(ProjectAttribute.descrip, "painting in bora bora")
-                comentarioMain.setAttribute(ProjectAttribute.project, "https://cdn.icon-icons.com/icons2/3252/PNG/512/image_add_regular_icon_204373.png")
+                comentarioMain.setAttribute(ProjectAttribute.project, "https://cdn3.iconfinder.com/data/icons/photo-tools/65/upload-1024.png")
                 comentarioMain.setAttribute(ProjectAttribute.send, "https://static.thenounproject.com/png/1015120-200.png")
                 comentarioMain.setAttribute(ProjectAttribute.user, "M")
                 dashboard.appendChild(comentarioMain)

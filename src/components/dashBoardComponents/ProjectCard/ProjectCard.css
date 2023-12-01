@@ -1,12 +1,13 @@
 .project-pic{
-    width: 18.375rem;
-    height: 21,9rem;
+    width: 12.375rem;
+    height: 12,9rem;
     border-radius: 1.875rem;
     position: relative;
     padding-left: 30px;
     padding-top: 5.0625rem;
-    margin-left: 2rem;
+    margin-left: 8rem;
     z-index: 1;
+    opacity: 40%;
 }
 .post-contenedor{
     border-radius: 1.25rem;
@@ -68,4 +69,10 @@
     padding-top: 25.4rem;
     margin-left: 1.5rem;
     
+}
+
+.input-link{
+    font-family: 'Poppins', sans-serif;
+    width: 10rem;
+
 }
