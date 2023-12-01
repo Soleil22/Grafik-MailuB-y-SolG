@@ -3,6 +3,7 @@ import EditNaveUpCss from "./NavUp.css"
 import { addObserver, appState, dispatch } from "../../../store";
 import { navigate } from "../../../store/actions";
 import { Screens } from "../../../types/navigation";
+import firebase from "../../../utils/firebase";
 
 export enum NavUpAttribute {
     "appicon" = "appicon",
@@ -40,7 +41,7 @@ class NavUp extends HTMLElement {
         this.render()
         const button = this.shadowRoot?.querySelector('button');
         button?.addEventListener(('click'), () =>{
-          dispatch(navigate(Screens.LOGIN))
+          firebase.signOff
         })
     }
 

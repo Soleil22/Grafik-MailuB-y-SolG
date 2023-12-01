@@ -61,11 +61,11 @@ class Container extends HTMLElement {
             const BannerContainer = this.ownerDocument.createElement("banner-main") as Banner
             BannerContainer.classList.add("contenedor-papa-banner")
             BannerContainer.setAttribute(BannerAttribute.header, "Check out what is trending in Grafik right now!")
-            BannerContainer.setAttribute(BannerAttribute.img, "https://s3-alpha-sig.figma.com/img/08c9/353f/09584cf003945b3314dfc98c98e3f097?Expires=1696204800&Signature=J92H-NvkD2~bj1bZLib43g-RknQcRmk2Bg9g0-dSXBvrT4nuGApk5m8j-72fXzmtwcE1rRYeX7~4gIJ7LVdt~u65aVz8lB9UWtb7I5B~RkBy1WcvRZDO1q8kHMKjd~pdeNU6~51JMv~htLz6qeC01Ptu4Y6s6gwke4KF5dCx4~t~ShwLwRo31Fi7ZSajwL5byqJ9aXnkY0ejHlOYwB0LiixUjad3dcgzQ9fHWflJlA0Or4hpu~wF50UUO1b39NtVO3Rdm8zA66Y-hz6PxOIairitlFUzLkdqaGjBSUEZRA2Tws5TJjZF7tHcdIBkVpqAuEOr2EsBKLDpoUPPTasjoA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            BannerContainer.setAttribute(BannerAttribute.img2, "https://s3-alpha-sig.figma.com/img/dd7a/2e7a/e87f980566e6d5fd67e0b196c1d48f49?Expires=1696204800&Signature=Zwg68DX71VwGj0HRchkSiAfadMZVG0Zvq3id-mdX2DjN8PUtXJSqY3la-rUIPCde0q2FVTZ8pKGkJDaTKq4BF8XxM4I7xthLkF98PwsBKkOlydwD0ka62vtk-Ha9XhGF0xD~g392FqOC6M0L9ctCQBL~XDFK-0nltUcw-q4Yza93EpWPvbMm5xER~N1xLFXC6FEk63e0SuG~3xXuOpV6fFtfl8A1qDcnINl6Gkp3CKTqAQwtyYXLaAkA8mewKuAiQw~1F7LZCToELeN0ClP0Tr1A9vm3RIFTAes8xE~Oh1LzcBfCWCi~BrBodd1ipbBxItUdHtHrmyrAnVlNY0h7kg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            BannerContainer.setAttribute(BannerAttribute.img3, "https://s3-alpha-sig.figma.com/img/34c1/1562/6a5c331a099d85340db0b4dec69652ee?Expires=1696204800&Signature=fRysk~ac22bGt96nHe2cQY~P69ayfvtP8qLAZoPcixWbE1dqAB7V9mFBvuYBs0ous1bb9Bg~nSC1DcPZvY5N9pAZVEo5BkWMAOoZZTsF2ramgZ00JAfrvFhGb~HQ-Aigfbq6Pz7maXs3CgDG-we5xfY-InJBbL0~Tb0~kTTMlx3MC5QfV7JLPJo8DtjP-pLBaf9qBH~9Yl7p~Bfm4cUr3dk~oTtVpfD3xSJ8GYp6YI9Rj~DCob3xKyvxwU0JFQevqd07fL1PNnAodwLbF7Wb~tHgsqI0CgcTzhF3O8NFKnDAQRKeL2C2d9SyP3wogDLo-8cwy97CZJOntxDGsjnDGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            BannerContainer.setAttribute(BannerAttribute.img4, "https://s3-alpha-sig.figma.com/img/2d1f/4b61/2420189205ffa17f08c687f48074bbdd?Expires=1696204800&Signature=APgsZFg-Tnbux4lRg43kPn8XxW~fde4hbnQpVC5qyhcjUvPinA~takB25BMOIdpF5dO7zZQ8W1IgMaVGV-CytrkKufPO2PIWBT1yPzsQ5dzUkmg2vjcqMBx4Vz54ArexwgwQ8-fLwrEDBrFsE9m1KvU81HlZDjioroJp7gCo1cTukAxybchyDsu13JMTzCMsRZwK8SpmCUOZd8Mj~d6BAdsvPMYaMjklronljHVWz72BIbBTVBpOhah9SmPxoXfXJorWAN3CR7Lphs4DH5sijkquu~d9pvju8geSh~CmzHGGrStH~6iG7MLrIN7ZhANpOrBli0V6br-oj-CgVujOxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            BannerContainer.setAttribute(BannerAttribute.img5, "https://s3-alpha-sig.figma.com/img/f8e7/c65f/ef7f46714aa4b3fd51086d2122616094?Expires=1696204800&Signature=oytVC~oP00adOMWxJ0yK7yxtRuezyt8Q9K-xug2NXChAcLqVjY9k5b4JPSDmLkt9Ywv2F2LiegFEGZO~oGNJQJQFSxVkLbB08Ek6Z4OBVV6seH2ptyHHvJ-N7VfCji5Lsn2L0ErRHIiz~8G9KZJbW-UpqRatT5qxtkadgZkxkk~f84W996k5DiMkIlSy7X4qcnXwEND-ZDpyErBoiJi7Q4wym3zS1gm~Bwl3JKtMxyEe9Im9ah~LZ2oAY4Kv51h9WICD9SfhSK74mRJ-ZNnjEx28fGqDddoovczsol-u2jfBcvnZuWJwXbXKufTZU0j3bLIAVTFfj0~KSin3vSMkCw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            BannerContainer.setAttribute(BannerAttribute.img, "https://github.com/Soleil22/imagenes-grafik/blob/main/img1.png?raw=true")
+            BannerContainer.setAttribute(BannerAttribute.img2, "https://github.com/Soleil22/imagenes-grafik/blob/main/img2.png?raw=true")
+            BannerContainer.setAttribute(BannerAttribute.img3, "https://github.com/Soleil22/imagenes-grafik/blob/main/img3.png?raw=true")
+            BannerContainer.setAttribute(BannerAttribute.img4, "https://github.com/Soleil22/imagenes-grafik/blob/main/img4.png?raw=true")
+            BannerContainer.setAttribute(BannerAttribute.img5, "https://github.com/Soleil22/imagenes-grafik/blob/main/img5.png?raw=true")
             dashboard.appendChild(BannerContainer)
 
             //data de tarjetas del diseñador
@@ -153,7 +153,7 @@ class Container extends HTMLElement {
 
             const navLeftContainer = this.ownerDocument.createElement("nav-left") as NavLeft
             navLeftContainer.setAttribute(NavLeftAttributes.username, "Anna!")
-            navLeftContainer.setAttribute(NavLeftAttributes.profileimg, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1696204800&Signature=B8hSlQTrManrBxpvxZi-x8CG3YTpn1rgpTiNS0Nvu3HQawGz29BvWbz4bANND-Dndc8HcWLoxKPKEh5nofkYemmcJ4c-JH28JpPMcnNkol732tVlh-eE2om1iZJKJjdVtoAg4fA5qIbJBkaOsOFcqXM~UL2dDUVK--RQVjEvywe0oXZNntG6UVz1gSoSb25RgkqWEustu6QVZ722GyEeeC4TQEavJXLLTwl0sx2agxYeqciMtc13myVVyGQevR-eDaEwQOJTstljUb9xcDqlrHNbzUKApF4Dbb~WgUNaIqerBWL7ObZW9z0v4xMG3ej9lwtaNGrN~iJYhHifHPD-Gg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            navLeftContainer.setAttribute(NavLeftAttributes.profileimg, "https://github.com/Soleil22/imagenes-grafik/blob/main/images/se%C3%B1oraperfil.png?raw=true")
             nav.appendChild(navLeftContainer)
 
             //textos para usar en el index papa

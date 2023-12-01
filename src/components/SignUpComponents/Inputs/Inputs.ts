@@ -47,9 +47,9 @@ class InputText extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <style>${EditInputSignCss}</style>
             <div class="container-input">
-            <input class="input" type="text" placeholder="${this.text}">
+            <input class="input" type="text" id="register-input" placeholder="${this.text}">
             <input class="input" type="text" placeholder="${this.text2}">
-            <input class="input" type="password" placeholder="${this.pass}">
+            <input class="input" type="password" id="password-input" placeholder="${this.pass}">
             <input class="input" type="password" placeholder="${this.pass2}">
             </div>
             `
