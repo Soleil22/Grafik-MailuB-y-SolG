@@ -5,6 +5,12 @@ import InputText, {InputTextAttributes} from "../../components/LogInComponents/I
 import ButtonsLogin, {ButtonAttributes} from "../../components/LogInComponents/Buttons/Buttons"
 import DecorationBackground, {DecorationAttributes}  from "../../components/LogInComponents/DecorationBackground/DecorationBackground"
 import firebase from "../../utils/firebase"
+import EditButtonsCss from "../../components/LogInComponents/Buttons/Buttons.css"
+import EditInputTextCss from "../../components/LogInComponents/InputText/InputText.css"
+import { Screens } from "../../types/navigation"
+import { navigate } from "../../store/actions"
+import { dispatch } from "../../store"
+
 const credentials = { email: '', password: '' }
 class LogInContainer extends HTMLElement {
 
@@ -13,8 +19,12 @@ class LogInContainer extends HTMLElement {
         this.attachShadow({mode: "open"})
     }
 
-    connectedCallback(){
+    async connectedCallback(){
         this.render()
+        const buttons = this.shadowRoot?.querySelector(".btn-sign");
+        buttons?.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.SIGNUP))
+        })
     }
 
    async handleLoginButton(){
@@ -25,6 +35,8 @@ class LogInContainer extends HTMLElement {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
             <style>${EditLogInCss}</style>
+            <style>${EditButtonsCss}</style>
+            <style>${EditInputTextCss}</style>
             `
             //Rectangle with information
             const RectangleContainer = this.ownerDocument.createElement("rectangle-information") as RectangleInformation
@@ -85,10 +97,12 @@ class LogInContainer extends HTMLElement {
             containerSignUp.classList.add("container-sign")
 
             const text = this.ownerDocument.createElement("a")
+            text.classList.add("password-forgot")
             text.innerText = "Don’t have an account yet?"
             containerSignUp.appendChild(text)
 
             const btnSign = this.ownerDocument.createElement("button")
+            btnSign.classList.add("btn-sign")
             btnSign.innerText = "SIGN UP"
             containerSignUp.appendChild(btnSign)
 

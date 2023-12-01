@@ -1,6 +1,7 @@
 import { addObserver, appState, dispatch } from "../../../store";
 import { navigate } from "../../../store/actions";
 import { Screens } from "../../../types/navigation";
+import firebase from "../../../utils/firebase";
 
 import EditNaveUpCss from "./IconsNavUp.css"
 
@@ -41,7 +42,7 @@ class NavUpIcons extends HTMLElement {
         this.render()
         const button = this.shadowRoot?.querySelector("button");
         button?.addEventListener(('click'), () =>{
-          dispatch(navigate(Screens.LOGIN))
+          firebase.signOff()
         })
         const buttonicon = this.shadowRoot?.querySelector(".app-img");
         buttonicon?.addEventListener(('click'), () =>{
