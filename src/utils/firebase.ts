@@ -1,6 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, doc, getDoc, getDocs, getFirestore, where } from "firebase/firestore";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { dispatch } from "../store";
+import { navigate } from "../store/actions";
+import { Screens } from "../types/navigation";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,6 +23,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app)
 
 /*const addPost = async (post: any) => {
   try {
@@ -29,51 +34,115 @@ const db = getFirestore(app);
   }
 }*/
 
-const getPost = async() => {
+const registerUser = async ({
+  email,
+  password
+}: {
+  email: string,
+  password: string
+}): Promise<boolean> => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+    console.log(userCredential.user);
+    return true
+  } catch (error) {
+    console.log(error);
+    return false
+  }
+}
+
+const loginUser = async ({
+  email,
+  password
+}: {
+  email: string,
+  password: string
+}): Promise<boolean> => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password)
+    console.log(userCredential.user);
+    return true
+  } catch (error) {
+    console.log(error);
+    return false
+  }
+}
+
+const signOff = async () => {
+  try {
+    await signOut(auth)
+  } catch (error) {
+    console.log(error);
+    
+  }
+}
+
+const getPost = async () => {
   const querySnapshot = await getDocs(collection(db, "TendenciesPosts"))
-  const transformed:any = []
+  const transformed: any = []
 
-  querySnapshot.forEach((doc)=>{
+  querySnapshot.forEach((doc) => {
     const data = doc.data()
-    transformed.push({id: doc.id, ...data})
+    transformed.push({ id: doc.id, ...data })
   })
   return transformed
 }
 
-const getPostUser = async() => {
+const getPostUser = async () => {
   const querySnapshot = await getDocs(collection(db, "UploadFilesUser"))
-  const transformed:any = []
+  const transformed: any = []
 
-  querySnapshot.forEach((doc)=>{
+  querySnapshot.forEach((doc) => {
     const data = doc.data()
-    transformed.push({id: doc.id, ...data})
+    transformed.push({ id: doc.id, ...data })
   })
   return transformed
 }
 
-const getPostDesigner = async() => {
+const getPostDesigner = async () => {
   const querySnapshot = await getDocs(collection(db, "DesignersProjects"))
-  const transformed:any = []
+  const transformed: any = []
 
-  querySnapshot.forEach((doc)=>{
+  querySnapshot.forEach((doc) => {
     const data = doc.data()
-    transformed.push({id: doc.id, ...data})
+    transformed.push({ id: doc.id, ...data })
   })
   return transformed
 }
 
 export const addPost = async (post: any) => {
-  try{
-      const where = collection(db, "UploadFilesUser")
-      await addDoc(where, post)
+  try {
+    const where = collection(db, "UploadFilesUser")
+    await addDoc(where, post)
   } catch (error) {
-      console.error(error)
+    console.error(error)
   }
 }
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    const uid = user.uid;
+    console.log(uid);
+    dispatch(navigate(Screens.DASHBOARD))
+    
+    
+    // ...
+  } else {
+    // User is signed out
+    // ...
+    console.log('sign out');
+    dispatch(navigate(Screens.LOGIN))
+  }
+});
 
 export default {
   getPost,
   addPost,
   getPostUser,
-  getPostDesigner
+  getPostDesigner,
+  registerUser,
+  loginUser,
+  signOff,
 }

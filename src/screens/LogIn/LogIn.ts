@@ -33,11 +33,34 @@ class LogInContainer extends HTMLElement {
             RectangleContainer.setAttribute(LogInAttributes.textsmall, "or use your email")
             this.shadowRoot.appendChild(RectangleContainer)  
             
-            const InputText = this.ownerDocument.createElement("input-text") as InputText
+            /*const InputText = this.ownerDocument.createElement("input-text") as InputText
             InputText.classList.add("input-text")
             InputText.setAttribute(InputTextAttributes.text, "email")
             InputText.setAttribute(InputTextAttributes.text2, "password")
-            this.shadowRoot.appendChild(InputText)
+            this.shadowRoot.appendChild(InputText)*/
+            const InputEmail = this.ownerDocument.createElement('input')
+            InputEmail.classList.add("input")
+            InputEmail.placeholder="email"
+            /*InputEmail.type = 'email'
+            InputEmail.addEventListener('change', (e: any) => {
+                credentials.email = e.target.value
+            })*/
+
+            const InputPass = this.ownerDocument.createElement('input')
+            InputPass.classList.add("input")
+            InputPass.placeholder="password"
+          /*  InputPass.type = 'password'
+            InputPass.addEventListener('change', (e: any) => {
+                credentials.password = e.target.value
+            })*/
+
+            const logBtn = this.ownerDocument.createElement('button')
+            logBtn.classList.add("button-signup")
+            logBtn.innerText="LOG IN" 
+            this.shadowRoot.appendChild(logBtn)
+
+            this.shadowRoot.appendChild(InputEmail)
+            this.shadowRoot.appendChild(InputPass)
 
             const linkPasswordForgot = this.ownerDocument.createElement("a")
             linkPasswordForgot.classList.add("password-forgot")
@@ -69,12 +92,12 @@ class LogInContainer extends HTMLElement {
             const decoration = this.ownerDocument.createElement("decoration-container") as DecorationBackground
             decoration.classList.add("decoration")
             decoration.setAttribute(DecorationAttributes.img2, "https://cdn-icons-png.flaticon.com/512/106/106226.png")
-            decoration.setAttribute(DecorationAttributes.img1, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1696204800&Signature=B8hSlQTrManrBxpvxZi-x8CG3YTpn1rgpTiNS0Nvu3HQawGz29BvWbz4bANND-Dndc8HcWLoxKPKEh5nofkYemmcJ4c-JH28JpPMcnNkol732tVlh-eE2om1iZJKJjdVtoAg4fA5qIbJBkaOsOFcqXM~UL2dDUVK--RQVjEvywe0oXZNntG6UVz1gSoSb25RgkqWEustu6QVZ722GyEeeC4TQEavJXLLTwl0sx2agxYeqciMtc13myVVyGQevR-eDaEwQOJTstljUb9xcDqlrHNbzUKApF4Dbb~WgUNaIqerBWL7ObZW9z0v4xMG3ej9lwtaNGrN~iJYhHifHPD-Gg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            decoration.setAttribute(DecorationAttributes.img3, "https://s3-alpha-sig.figma.com/img/ec92/2180/08540f58212964c427891bf8327f0d27?Expires=1699833600&Signature=maLpvAp8WuLPUjmx0YWk9d07OOhRssPPEIIAfjWAakgy951DnaaL~Zym7y~UnLpfjVWiRKGQbnDsP~69MznA7bovs27icw~j8xwZyi0Gf7urBdC6JfDrWqBe67Pawmfu1DllMXP-HpQY8diF6EBOg13NkoR0pzN-IR1SBwOYFmoF4GhpaUdOVzqGRuxiu8XkdyHXGW8zuv0Etumht1~aS2ef3gd~4bXsiSmt7ZYAS~gpXafjadRST3OcL9xVBt1Q6vMogvz~r6a2TPHqeBLXHtSt-N7b0cw80KveNFe2hpXmTb9Z05ZcFafP79QIg5jAunzr4BbhNev1xcDqDYpR-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            decoration.setAttribute(DecorationAttributes.img4, "https://s3-alpha-sig.figma.com/img/da64/f02c/97a514e9e8c98d647f06c12400f1f0bd?Expires=1699833600&Signature=A0qXjuPUp2~p6hvRB7U14~KC-pJkuHDpkHRxEkhZX1TGMNYgNMs68vU3OR8~GIMsT67pv2PNiuYZBt8-GwmWkf284SPp~okg5FZdVzTF6jJV0TXI6WE0ZQhtRmuO-NfUsg~D9H8ybSUVOS198jFHPSTlrzNJZXnLfamp83-hvgV9SUmTKJAtI~fhLI1O5YvhtT2uaXxDFo7frzgh7J9VS320J9eGdXO6GIdKgLR6uTHS8Iijiw1ZbJD6hngzSxKWP~spL6xYJxlrUjSg6Iis~47q~N8Mx8WmSzfI4bdTcUP4098IVNnB6JiFTuDMgFgJmo8ojajQMyd~NfNrHnj9zw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            decoration.setAttribute(DecorationAttributes.img1, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1702252800&Signature=FDuVTQOjTriLMCxJmkw3OwGgyhYPjt3cVLh-3bQ1NJKdaL31bHCwYH2hEKfmmHo0j8TO9A3HnHNmn29o2GKhw4AUXj7KePP6CaVZiajHNKOLzQ-hJMvAgX8eZLhCVYcM4DaRrlUf9zZrGEyRkCarbi0yY8gSO-zf3O9oX4iH4psL901yS6Yuffd~MTcG7G9WAv5hExwBFQmZqsxQK65yoOPDJI0nHcJWnniMiIK7SuFIDcyTVsXvf4WWC2i2qPwwNG6y5oh7exbDMGZWMzW9FfQeBdtAf86xU9~mBJvEAkq6orOOwlbmb1U4tgqickMbMVmnPDKotgR8Wl1jXe0KHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            decoration.setAttribute(DecorationAttributes.img3, "https://s3-alpha-sig.figma.com/img/ec92/2180/08540f58212964c427891bf8327f0d27?Expires=1702252800&Signature=MWY139W6F~Pz5HPsqx6ojPoWDLfEeH9Iw0MdNTqsYpVfnVuzuG6m5MXVXrlU-iTWUdEBlxFLHWFKRdf8vdh8oHexw6lRQaXyY8F72-Xrs21j57wntJYs0UjRmIQGFCyIvr0Pz4aRzUYxLll8D8KeI~36BRa3eBCbPRwemcTNpnVYzW59Q87AYMtFkxcAoJDH4HeUZANd7~ZFpgfUfB~GCFgU8ZEkZ9peZuRN1DAC~nzALoqkiK9LeleHwsLVomvlXLU8X-yeyo6dN3RvyflYUbFJ8~F7wGlynVqJgcuIYD~Y4nf1-W51XdkTnwRColL0MHtLtu-UneB99-gJ~Q~jzA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            decoration.setAttribute(DecorationAttributes.img4, "https://s3-alpha-sig.figma.com/img/da64/f02c/97a514e9e8c98d647f06c12400f1f0bd?Expires=1702252800&Signature=T5xlefapZApWM3XyRxBqnLuY-6eURnbakP~sNwboTrJz3H0NuyujhLGSQUudbBQSBvcKSSzKuPzn98x60MvviPB6Z7pfw3erzyY7VIUuuIw2brDBGEzmLsXrZ1fRfpqf0TTPScXTEwJvKFEyznbb8bwp05vahE1dF~3TdBgsYDwXH03n7HCfq9ryh68gcF-eBy4lThvDb70APfoZBjQvCpHn0PLOfJ6uIym1zz-BXAH7pRMvK69gq8qOqhF3EXY-pbWHKPSV4VXPDU8FoEY1I6eBnoVMTooj8vxqgm5XUJWhSuMFgyZFmM0d~91D-5KxrRkABbNVOPMnVyGE6Go7ig__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
             decoration.setAttribute(DecorationAttributes.img5, "https://www.figma.com/file/MB6JxhOuCnQGcA3HR4p10U/image/35deaa821bd4884197e76a04b3286e1852b2fc15?fuid=1069449700781241913")
-            decoration.setAttribute(DecorationAttributes.img6, "https://s3-alpha-sig.figma.com/img/17b8/0342/98754c0d3fc94c68729548274a0f86c6?Expires=1699833600&Signature=SwuJGouYmAuUUy5D9t51OJuYvs4t7jiic1lxFr2CJTDN7LjpUFDZw-sFg2GkK69CC8bxEHm1yufnyblqJdz3AdppXI55WKM9mloQtmZPzZw9KCbfyEiXY7e2w5L6DT6mpjLuf6XaUSSWleuxqBQZpxba4ifKrUDU4CowkExKbhCr7tCJBrwDfs7hPS0nM2qxqbzWEq8RVBatVsy7lNYHgGYrQuMBVKlAUN1mZylPxpT69h1cKhHf0Ts4V7e9wwebwnYS7e6c4og6Zt46RehUcbYZsklBpoLZLt2iXEULx6Vl1GRoU3nKQbds7-DR265Rfk74r4IhRVwoSEI5GcMR2g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
-            decoration.setAttribute(DecorationAttributes.img7, "https://s3-alpha-sig.figma.com/img/e763/eff0/4bee936a5021ed7f06196af11a7aa0ae?Expires=1699833600&Signature=GKdmpOL~8myS1qhuHKQUPY0~51ESqt97q-6so5yTCFR0QMtrHBz5SwM-esBF0Zb8~RT3Gvxitl76ukPj4AhEojH-rZTqfJfPxRBih7-AwmJ1q-g1MO3m83CujqCE6cQ7wW6w7hVr3GOKF3ZIPIeBhpxJDW47tTSExS5YKgyhXTsh1fPfLwmLtGtBn-lOnYZoRZiUgubxAsSi6cPWj7AvK-qi-Z3nQXFMhF2TgkcAF-mMnbxBzG89F5EXsUSxnsJWftnKZQ1Qx9BhpMqZEZDQ3R6NKurntrAIzdDd~004mbm3t6VhHatD4r9q-pUOtCoJOWW-V1jAzS~GKJb2T20W1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            decoration.setAttribute(DecorationAttributes.img6, "https://github.com/Soleil22/imagenes-grafik/blob/main/emoticon%20login%20y%20sign%20up.png?raw=true")
+            decoration.setAttribute(DecorationAttributes.img7, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1702252800&Signature=FDuVTQOjTriLMCxJmkw3OwGgyhYPjt3cVLh-3bQ1NJKdaL31bHCwYH2hEKfmmHo0j8TO9A3HnHNmn29o2GKhw4AUXj7KePP6CaVZiajHNKOLzQ-hJMvAgX8eZLhCVYcM4DaRrlUf9zZrGEyRkCarbi0yY8gSO-zf3O9oX4iH4psL901yS6Yuffd~MTcG7G9WAv5hExwBFQmZqsxQK65yoOPDJI0nHcJWnniMiIK7SuFIDcyTVsXvf4WWC2i2qPwwNG6y5oh7exbDMGZWMzW9FfQeBdtAf86xU9~mBJvEAkq6orOOwlbmb1U4tgqickMbMVmnPDKotgR8Wl1jXe0KHg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
             this.shadowRoot.appendChild(decoration)
         }
     }
