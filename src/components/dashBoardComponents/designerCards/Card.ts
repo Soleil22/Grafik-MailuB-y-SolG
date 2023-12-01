@@ -1,4 +1,7 @@
 import EditCardCss from "./Card.css"
+import { addObserver, appState, dispatch } from "../../../store";
+import { navigate } from "../../../store/actions";
+import { Screens } from "../../../types/navigation";
 
 export enum Attribute {
     "user" = "user",
@@ -40,6 +43,11 @@ class CardUser extends HTMLElement {
 
     connectedCallback(){
         this.render()
+
+        // const buttonfalse = this.shadowRoot?.querySelector(".card-main-container");
+        // buttonfalse?.addEventListener(('click'), () =>{
+        //   dispatch(navigate(Screens.PUBLICATIONS))
+        // })
     }
 
     render(){

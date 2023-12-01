@@ -2,7 +2,6 @@ import * as components from "../../components/export"
 import NavUp, {NavUpAttribute} from "../../components/dashBoardComponents/NavBarAbove/navBarUp";
 import NavLeft, {NavLeftAttributes} from "../../components/dashBoardComponents/navLeft/navLeft"
 import Tendencies,{TendencyAttributes} from "../../components/tendenciesPostsComponents/tendencyPost/tendencyPost";
-import { tendenciesData } from "../../data/tendenciesPostData";
 import EditMainCss from "../DashBoard/main.css"
 import EditShadowCss from "../DashBoard/shadowroot.css"
 import Footer,{FooterAttributes} from "../../components/dashBoardComponents/footer/footer";
@@ -20,16 +19,18 @@ class TendenciesScreen extends HTMLElement{
 
     }
 
-    connectedCallback(){
+    async connectedCallback(){
+        const posts = await firebase.getPost()
+        posts.forEach(async (post:any) => {
+            const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
+            postDesigner.setAttribute(TendencyAttributes.post, post.post)
+            postDesigner.setAttribute(TendencyAttributes.username, post.username)
+            this.posts.push(postDesigner)
+        })
         this.render()
     }
-
+    
     async render(){
-        const posts = await firebase.getPost()
-        posts.forEach((post:any) => {
-            const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
-            this.shadowRoot?.appendChild(postDesigner)
-        })
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
             <style>${EditMainCss}</style>
@@ -53,15 +54,14 @@ class TendenciesScreen extends HTMLElement{
                 postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
                 postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
                 this.posts.push(postDesigner)
-            })
+            })*/
 
             const PostDadContainer = this.ownerDocument.createElement("section")
             PostDadContainer.classList.add("contenedor-post-papa")
             this.posts.forEach((postimg) => {
                 PostDadContainer.appendChild(postimg)
             })
-            console.log(tendenciesData)
-            this.shadowRoot.appendChild(PostDadContainer)*/
+            this.shadowRoot.appendChild(PostDadContainer)
 
             //Esto es la NAV
             const nav = this.ownerDocument.createElement("nav");
@@ -80,6 +80,8 @@ class TendenciesScreen extends HTMLElement{
             footerContainer.setAttribute(FooterAttributes.options4, "Contact us")
             footerContainer.setAttribute(FooterAttributes.options5, "About Grafik")
             this.shadowRoot.appendChild(footerContainer)
+
+            
 
             
         }

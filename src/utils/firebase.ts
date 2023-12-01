@@ -30,7 +30,7 @@ const db = getFirestore(app);
 }*/
 
 const getPost = async() => {
-  const querySnapshot = await getDocs(collection(db, "post"))
+  const querySnapshot = await getDocs(collection(db, "TendenciesPosts"))
   const transformed:any = []
 
   querySnapshot.forEach((doc)=>{
@@ -40,6 +40,40 @@ const getPost = async() => {
   return transformed
 }
 
+const getPostUser = async() => {
+  const querySnapshot = await getDocs(collection(db, "UploadFilesUser"))
+  const transformed:any = []
+
+  querySnapshot.forEach((doc)=>{
+    const data = doc.data()
+    transformed.push({id: doc.id, ...data})
+  })
+  return transformed
+}
+
+const getPostDesigner = async() => {
+  const querySnapshot = await getDocs(collection(db, "DesignersProjects"))
+  const transformed:any = []
+
+  querySnapshot.forEach((doc)=>{
+    const data = doc.data()
+    transformed.push({id: doc.id, ...data})
+  })
+  return transformed
+}
+
+export const addPost = async (post: any) => {
+  try{
+      const where = collection(db, "UploadFilesUser")
+      await addDoc(where, post)
+  } catch (error) {
+      console.error(error)
+  }
+}
+
 export default {
-  getPost
+  getPost,
+  addPost,
+  getPostUser,
+  getPostDesigner
 }

@@ -5,6 +5,7 @@ import "./screens/SignUp/SignUp"
 import "./screens/PerfilUser/PerfilUser"
 import "./screens/PerfilPost/PerfilPost"
 import "./screens/Tendencies/tendencies"
+import "./screens/PerfilExternalUsers/PerfilDesigners"
 
 import { addObserver } from "./store/index";
 import { appState } from "./store/index";
@@ -46,7 +47,7 @@ class AppContainer extends HTMLElement {
                 break;
 
             case Screens.PUBLICATIONS:
-                const publications = this.ownerDocument.createElement("log-container");
+                const publications = this.ownerDocument.createElement("perfil-card-designer");
                 this.shadowRoot?.appendChild(publications);
                 break; 
 

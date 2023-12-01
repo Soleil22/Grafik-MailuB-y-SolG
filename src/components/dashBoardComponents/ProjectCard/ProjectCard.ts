@@ -1,4 +1,6 @@
 import EditProjectCardCss from "./ProjectCard.css"
+import EditWriteCss from "./DescriptionPost.css"
+import firebase from "../../../utils/firebase"
 
 export enum ProjectAttribute {
     "nameuser" = "nameuser",
@@ -6,7 +8,13 @@ export enum ProjectAttribute {
     "project" = "project",
     "heart" = "heart",
     "send" = "send",
-    "like" = "like"
+    "like" = "like",
+    "user" = "user"
+}
+
+const formsPost = {
+    link: "",
+    description: ""
 }
 
 class ProjectCard extends HTMLElement {
@@ -16,6 +24,7 @@ class ProjectCard extends HTMLElement {
     heart?: string
     send?: string
     like?: string
+    user?: string
 
     static get observedAttributes(){
         const attrs: Record<ProjectAttribute,null> = {
@@ -24,7 +33,8 @@ class ProjectCard extends HTMLElement {
             project: null,
             heart: null,
             send: null,
-            like: null
+            like: null,
+            user: null
         }
         return Object.keys(attrs);
     }
@@ -48,6 +58,30 @@ class ProjectCard extends HTMLElement {
 
     connectedCallback(){
         this.mount()
+
+        const imgInput = this.shadowRoot?.querySelector(".input-link")
+        imgInput?.addEventListener("change", this.changeImg)
+
+        const descriptionPost = this.shadowRoot?.querySelector(".input")
+        descriptionPost?.addEventListener("change", this.changeDes)
+
+        const upload = this.shadowRoot?.querySelector(".buttonUpload")
+        upload?.addEventListener("click", () => {this.uploadForm(imgInput, descriptionPost)})
+    }
+
+    changeImg(e: any){
+        formsPost.link = e.target.value;
+    }
+
+    changeDes(e: any){
+        formsPost.description = e.target.value;
+    }
+
+    uploadForm (imgInput: any, descriptionPost: any){
+        firebase.addPost(formsPost)
+        imgInput.value = ""
+        descriptionPost.value = ""
+        this.render()
     }
 
     mount(){
@@ -64,7 +98,20 @@ class ProjectCard extends HTMLElement {
                 <div class= "foto-container">
                     <img src="${this.project}" alt="" class="project-pic">
                 </div>
-                <p class="text-upload">Upload image</p>
+                <input class="input-link" type="text" placeholder="put the link of you image">
+            </div>
+            <style>${EditWriteCss}</style>
+            <div class="container">
+            <p>Post description</p>
+            <div class="user-input">
+            <div class="cajita">
+            <h4>${this.user}</h4>
+            </div>
+            <input class="input" type="text" placeholder="Add a description for your post">
+            </div>
+            <div>
+            <button class="buttonUpload">UPLOAD</button>
+            </div>
             </div>
             `
         }
