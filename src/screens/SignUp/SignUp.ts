@@ -107,7 +107,6 @@ class SignUpContainer extends HTMLElement {
 
             this.shadowRoot.appendChild(containerSignUp)
         }
-
     }
 }
 

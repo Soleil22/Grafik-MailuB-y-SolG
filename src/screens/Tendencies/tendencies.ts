@@ -47,15 +47,6 @@ class TendenciesScreen extends HTMLElement{
             dashboard.appendChild(NavUpDadContainer)
             this.shadowRoot.appendChild(dashboard);
 
-//for each data para ver si me renderiza
-
-           /* tendenciesData.forEach((postimg)=> {
-            const postDesigner = this.ownerDocument.createElement("post-tendency") as Tendencies
-                postDesigner.setAttribute(TendencyAttributes.post, postimg.post)
-                postDesigner.setAttribute(TendencyAttributes.username, postimg.username)
-                this.posts.push(postDesigner)
-            })*/
-
             const PostDadContainer = this.ownerDocument.createElement("section")
             PostDadContainer.classList.add("contenedor-post-papa")
             this.posts.forEach((postimg) => {
@@ -80,9 +71,6 @@ class TendenciesScreen extends HTMLElement{
             footerContainer.setAttribute(FooterAttributes.options4, "Contact us")
             footerContainer.setAttribute(FooterAttributes.options5, "About Grafik")
             this.shadowRoot.appendChild(footerContainer)
-
-            
-
             
         }
     } 

@@ -1,15 +1,10 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, doc, getDoc, getDocs, getFirestore, where } from "firebase/firestore";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateEmail, updatePassword } from 'firebase/auth'
 import { dispatch } from "../store";
 import { navigate } from "../store/actions";
 import { Screens } from "../types/navigation";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyD3mKNF2PTBGHEh8X4sYeFHfjnJnsZWAl8",
   authDomain: "grafik-55905.firebaseapp.com",
@@ -25,14 +20,30 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app)
 
-/*const addPost = async (post: any) => {
-  try {
-    const where = collection(db, "TendenciesPost")
-    await addDoc(where,post)
-  } catch (error) {
-    console.error(error)
+
+  const updateUserEmail = async (email:string): Promise<boolean> => {
+    try {
+      if(auth.currentUser){
+        await updateEmail(auth.currentUser, email)
+      }
+      return true
+    } catch (error) {
+      console.log(error);
+      return false
+    }
   }
-}*/
+
+  const updatePass = async (password:string): Promise<boolean> => {
+    try {
+      if(auth.currentUser){
+        await updatePassword(auth.currentUser, password)
+      }
+      return true
+    } catch (error) {
+      console.log(error);
+      return false
+    }
+  }
 
 const registerUser = async ({
   email,
@@ -147,4 +158,6 @@ export default {
   registerUser,
   loginUser,
   signOff,
+  updateUserEmail,
+  updatePass
 }

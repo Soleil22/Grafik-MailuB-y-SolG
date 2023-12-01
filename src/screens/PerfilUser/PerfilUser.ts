@@ -3,7 +3,8 @@ import EditPerfilUserCss from "./PerfilUser.css"
 import TarjetUser, {TarjetUserAttributes} from "../../components/PerfilUserComponents/TarjetUser/TarjetUser"
 import NavUp, {NavUpAttribute} from "../../components/PerfilUserComponents/IconsNavUp/IconsNavUp";
 import ChangePassword, {InputChangeAttributes} from "../../components/PerfilUserComponents/ChangePassword/ChangePassword";
-
+import firebase from "../../utils/firebase";
+const credentials = { email: '', password: '' }
 class PerfilUser extends HTMLElement {
 
     constructor(){
@@ -13,6 +14,11 @@ class PerfilUser extends HTMLElement {
 
     connectedCallback(){
         this.render()
+    }
+
+    async handleUpdateButton(){
+        firebase.updateUserEmail(credentials.email)
+        firebase.updatePass(credentials.password)
     }
 
     render(){
@@ -28,7 +34,7 @@ class PerfilUser extends HTMLElement {
 
             const TarjetUser = this.ownerDocument.createElement("tarjet-user-information") as TarjetUser
             TarjetUser.classList.add("tarjet-information")
-            TarjetUser.setAttribute(TarjetUserAttributes.perfil, "https://s3-alpha-sig.figma.com/img/022b/9ed5/0cfe89950d617403ba13fe5cd3b92fc2?Expires=1699833600&Signature=Y2k0WUtHO5bW3VzWJjyN7Yaj4m4Qs7xp~fw~NUfT5o3W8fbCuNJrWCh~Zxho93yapU8CaacueP4UF~kE4yptnc8N8y8wk5NTgxqV2-HnkTor3juCwCrxbSLMW-1D0JMc5Gxd8Bgix9ChkAgfJDa6uNRodd-0nlNXbD~SuQSd8z5mdaB4iUfG4pKPRXHiau-aX09DO4EcssQ9o8GYNq~zfUWaBfWMdx5JFzZliySJy7DN9158n5W6GCc1qZWsJZ9nTv4vstD7i-okbkfrim~WgAKoWzI1VfDJsrYVRMNhXtkVij8fRA8SCzYHX5Bn54s6L8ZI-nMlO0tE5A9KyBWfbw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4")
+            TarjetUser.setAttribute(TarjetUserAttributes.perfil, "https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png")
             TarjetUser.setAttribute(TarjetUserAttributes.name, "Anna Smith")
             TarjetUser.setAttribute(TarjetUserAttributes.profession, "UX/UI designer")
             TarjetUser.setAttribute(TarjetUserAttributes.publish, "25")
@@ -37,11 +43,35 @@ class PerfilUser extends HTMLElement {
             TarjetUser.setAttribute(TarjetUserAttributes.friends, "35")
             this.shadowRoot.appendChild(TarjetUser)  
 
-            const InputText = this.ownerDocument.createElement("input-text-change") as ChangePassword
-            InputText.classList.add("input-text-change")
-            InputText.setAttribute(InputChangeAttributes.text, "useremail@example.com")
-            InputText.setAttribute(InputChangeAttributes.text2, "*******")
-            this.shadowRoot.appendChild(InputText)
+    
+            const containerEditUser = this.ownerDocument.createElement("section")
+            containerEditUser.classList.add("editar-usuario")
+
+            const InputEmail = this.ownerDocument.createElement('input')
+            InputEmail.classList.add("input")
+            InputEmail.placeholder="email"
+            InputEmail.type = 'email'
+            InputEmail.addEventListener('change', (e: any) => {
+                credentials.email = e.target.value
+            })
+
+            const InputPass = this.ownerDocument.createElement('input')
+            InputPass.classList.add("input")
+            InputPass.placeholder="password"
+            InputPass.type = 'password'
+            InputPass.addEventListener('change', (e: any) => {
+                credentials.password = e.target.value
+            })
+
+            const btnUpdate = this.ownerDocument.createElement("button")
+            btnUpdate.classList.add("btn-log")
+            btnUpdate.innerText = "CHANGE PASSWORD"
+            btnUpdate.addEventListener('click', this.handleUpdateButton)
+
+            containerEditUser.appendChild(InputEmail)
+            containerEditUser.appendChild(InputPass)
+            containerEditUser.appendChild(btnUpdate)
+            this.shadowRoot.appendChild(containerEditUser)
         }
     }
 }

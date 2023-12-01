@@ -43,11 +43,6 @@ class CardUser extends HTMLElement {
 
     connectedCallback(){
         this.render()
-
-        // const buttonfalse = this.shadowRoot?.querySelector(".card-main-container");
-        // buttonfalse?.addEventListener(('click'), () =>{
-        //   dispatch(navigate(Screens.PUBLICATIONS))
-        // })
     }
 
     render(){

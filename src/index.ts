@@ -61,23 +61,8 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot?.appendChild(userpost);
                 break;
         
-        //     default:
-        //         break;
             }
     }
 }
 customElements.define('app-container', AppContainer)
 
-//<main-container></main-container>
-
-//<log-container></log-container>
-
-//<perfil-container></perfil-container>
-
-//<perfil-post-container></perfil-post-container>
-
-//<sign-container></sign-container>
-
-//<shop-container></shop-container>
-
-//<tendencies-container></tendencies-container>

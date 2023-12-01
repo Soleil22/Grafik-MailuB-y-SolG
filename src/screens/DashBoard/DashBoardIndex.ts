@@ -153,7 +153,7 @@ class Container extends HTMLElement {
 
             const navLeftContainer = this.ownerDocument.createElement("nav-left") as NavLeft
             navLeftContainer.setAttribute(NavLeftAttributes.username, "Anna!")
-            navLeftContainer.setAttribute(NavLeftAttributes.profileimg, "https://github.com/Soleil22/imagenes-grafik/blob/main/images/se%C3%B1oraperfil.png?raw=true")
+            navLeftContainer.setAttribute(NavLeftAttributes.profileimg, "https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png")
             nav.appendChild(navLeftContainer)
 
             //textos para usar en el index papa
